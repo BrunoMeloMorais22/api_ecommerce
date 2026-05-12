@@ -1,6 +1,13 @@
 const db = require('../config/db')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const rateLimit = require('express-rate-limit')
+
+const limiter = rateLimit({
+    windowMs: 15 * 30 * 1000,
+    max: 10,
+    message: "Muitas tentivas. Tente novamente mais tarde"
+})
 
 exports.register = async (req, res) => {
     const { nome, email, senha } = req.body
@@ -59,3 +66,5 @@ exports.login = (req, res) => {
         return res.json({ token })
     })
 }
+
+exports.limiter = limiter
