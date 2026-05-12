@@ -9,21 +9,23 @@ const limiter = rateLimit({
     message: "Muitas tentivas. Tente novamente mais tarde"
 })
 
-exports.register = async (req, res) => {
-    const { nome, email, senha } = req.body
+exports.register = async (req, res, next) => {
 
-    if (!nome || !email || !senha) {
-        return res.status(400).json({ erro: "Preencha todos os campos" })
-    }
+    try{
+        const { nome, email, senha } = req.body
 
-    const senhaHash = await bcrypt.hash(senha, 10)
-
-    const verifica = "SELECT * FROM usuarios WHERE email = ?"
-
-    db.query(verifica, [email], (err, result) => {
-        if (result.length > 0) {
-            return res.status(400).json({ erro: "Email já cadastrado" })
+        if (!nome || !email || !senha) {
+            return res.status(400).json({ erro: "Preencha todos os campos" })
         }
+
+        const senhaHash = await bcrypt.hash(senha, 10)
+
+        const verifica = "SELECT * FROM usuarios WHERE email = ?"
+
+        db.query(verifica, [email], (err, result) => {
+            if (result.length > 0) {
+                return res.status(400).json({ erro: "Email já cadastrado" })
+            }
 
         const insert = "INSERT INTO usuarios(nome, email, senha) VALUES (?, ?, ?)"
 
@@ -36,16 +38,23 @@ exports.register = async (req, res) => {
             })
         })
     })
+    }
+    catch(error){
+        next(error)
+    }
 }
 
-exports.login = (req, res) => {
-    const { email, senha } = req.body
+exports.login = (req, res, next) => {
 
-    if (!email || !senha) {
-        return res.status(400).json({ erro: "Preencha todos os campos" })
-    }
+    try{
+        const { email, senha } = req.body
 
-    db.query("SELECT * FROM usuarios WHERE email = ?", [email], async (err, result) => {
+        if (!email || !senha) {
+            return res.status(400).json({ erro: "Preencha todos os campos" })
+        }
+
+        db.query("SELECT * FROM usuarios WHERE email = ?", [email], async (err, result) => {
+        
         if (result.length === 0) {
             return res.status(404).json({ erro: "Usuário não encontrado" })
         }
@@ -65,6 +74,10 @@ exports.login = (req, res) => {
 
         return res.json({ token })
     })
+    }
+    catch(error){
+        next(error)
+    }
 }
 
 exports.limiter = limiter

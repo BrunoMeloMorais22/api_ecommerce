@@ -1,38 +1,49 @@
 const db = require('../config/db')
 
-exports.addToCart = (req, res) => {
-    const { produto_id, quantidade } = req.body
-    const usuario_id = req.usuarioId
+exports.addToCart = (req, res, next) => {
+    try{
+        const { produto_id, quantidade } = req.body
+        const usuario_id = req.usuarioId
 
-    const sql = `
-        INSERT INTO carrinho(usuario_id, produto_id, quantidade)
-        VALUES (?, ?, ?)
-    `
+        const sql = `
+            INSERT INTO carrinho(usuario_id, produto_id, quantidade)
+            VALUES (?, ?, ?)
+        `
 
-    db.query(sql, [usuario_id, produto_id, quantidade], (err) => {
-        if (err) return res.status(500).json({ erro: "Erro no servidor" })
+        db.query(sql, [usuario_id, produto_id, quantidade], (err) => {
+            if (err) return res.status(500).json({ erro: "Erro no servidor" })
 
-        return res.json({ mensagem: "Adicionado ao carrinho" })
-    })
+            return res.json({ mensagem: "Adicionado ao carrinho" })
+        })
+    } catch(error) {
+        next(error)
+    }
+    
 }
 
-exports.getCart = (req, res) => {
-    const usuario_id = req.usuarioId
+exports.getCart = (req, res, next) => {
 
-    const sql = `
-        SELECT 
-            carrinho.id,
-            produtos.nome,
-            produtos.preco,
-            carrinho.quantidade
-        FROM carrinho
-        JOIN produtos ON carrinho.produto_id = produtos.id
-        WHERE carrinho.usuario_id = ?
-    `
+    try{
+        const usuario_id = req.usuarioId
 
-    db.query(sql, [usuario_id], (err, result) => {
-        if (err) return res.status(500).json({ erro: "Erro no servidor" })
+        const sql = `
+            SELECT 
+                carrinho.id,
+                produtos.nome,
+                produtos.preco,
+                carrinho.quantidade
+            FROM carrinho
+            JOIN produtos ON carrinho.produto_id = produtos.id
+            WHERE carrinho.usuario_id = ?
+        `
 
-        return res.json(result)
-    })
+        db.query(sql, [usuario_id], (err, result) => {
+            if (err) return res.status(500).json({ erro: "Erro no servidor" })
+
+            return res.json(result)
+        })
+    } catch(error) {
+        next(error)
+    }
+    
 }

@@ -1,16 +1,18 @@
 const db = require('../config/db')
 
-exports.createOrder = (req, res) => {
-    const usuario_id = req.usuarioId
+exports.createOrder = (req, res, next) => {
 
-    const sqlCarrinho = `
-        SELECT produtos.preco, carrinho.quantidade
-        FROM carrinho
-        JOIN produtos ON carrinho.produto_id = produtos.id
-        WHERE carrinho.usuario_id = ?
-    `
+    try{
+        const usuario_id = req.usuarioId
 
-    db.query(sqlCarrinho, [usuario_id], (err, result) => {
+        const sqlCarrinho = `
+            SELECT produtos.preco, carrinho.quantidade
+            FROM carrinho
+            JOIN produtos ON carrinho.produto_id = produtos.id
+            WHERE carrinho.usuario_id = ?
+        `
+
+        db.query(sqlCarrinho, [usuario_id], (err, result) => {
 
         if (result.length === 0) {
             return res.status(400).json({ erro: "Carrinho vazio" })
@@ -33,12 +35,22 @@ exports.createOrder = (req, res) => {
             })
         })
     })
+    }
+    catch(error){
+        next(error)
+    }
 }
 
-exports.getOrders = (req, res) => {
-    const usuario_id = req.usuarioId
+exports.getOrders = (req, res, next) => {
 
-    db.query("SELECT * FROM pedidos WHERE usuario_id = ?", [usuario_id], (err, result) => {
-        return res.json(result)
-    })
+    try{
+        const usuario_id = req.usuarioId
+
+        db.query("SELECT * FROM pedidos WHERE usuario_id = ?", [usuario_id], (err, result) => {
+            return res.json(result)
+        })
+    }
+    catch(error){
+        next(error)
+    }
 }
