@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const userController = require('../controllers/userController')
+const limiter = require('../middlewares/rateLimiter')
 
-
-
+console.log(userController)
 /**
  * @swagger
  * /login:
@@ -39,7 +39,7 @@ const userController = require('../controllers/userController')
  *       500:
  *         description: Erro interno do servidor
  */
-router.post("/login", userController.limiter, userController.login)
+router.post("/login", limiter, userController.login)
 
 /**
  * @swagger

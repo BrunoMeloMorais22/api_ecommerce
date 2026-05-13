@@ -1,49 +1,41 @@
-const db = require('../config/db')
+const cartService = require('../services/cartService')
 
-exports.addToCart = (req, res, next) => {
+exports.addToCart = async(req, res, next) => {
+
     try{
+
         const { produto_id, quantidade } = req.body
+
         const usuario_id = req.usuarioId
 
-        const sql = `
-            INSERT INTO carrinho(usuario_id, produto_id, quantidade)
-            VALUES (?, ?, ?)
-        `
+        const result = await cartService.addToCart(
+            usuario_id,
+            produto_id,
+            quantidade
+        )
 
-        db.query(sql, [usuario_id, produto_id, quantidade], (err) => {
-            if (err) return res.status(500).json({ erro: "Erro no servidor" })
+        res.status(200).json(result)
 
-            return res.json({ mensagem: "Adicionado ao carrinho" })
-        })
-    } catch(error) {
+    } catch(error){
         next(error)
     }
-    
+
 }
 
-exports.getCart = (req, res, next) => {
+exports.getCart = async(req, res, next) => {
 
     try{
+
         const usuario_id = req.usuarioId
 
-        const sql = `
-            SELECT 
-                carrinho.id,
-                produtos.nome,
-                produtos.preco,
-                carrinho.quantidade
-            FROM carrinho
-            JOIN produtos ON carrinho.produto_id = produtos.id
-            WHERE carrinho.usuario_id = ?
-        `
+        const carrinho = await cartService.getCart(
+            usuario_id
+        )
 
-        db.query(sql, [usuario_id], (err, result) => {
-            if (err) return res.status(500).json({ erro: "Erro no servidor" })
+        res.status(200).json(carrinho)
 
-            return res.json(result)
-        })
-    } catch(error) {
+    } catch(error){
         next(error)
     }
-    
+
 }

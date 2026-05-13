@@ -1,40 +1,34 @@
-const db = require('../config/db')
+const productService = require('../services/productService')
 
-exports.createProduct = (req, res, next) => {
+exports.createProduct = async(req, res, next) => {
 
     try{
+
         const { nome, preco } = req.body
 
-        if (!nome || !preco || isNaN(preco) || preco <= 0) {
-            return res.status(400).json({ erro: "Dados inválidos" })
-        }
+        const result = await productService.createProduct(
+            nome,
+            preco
+        )
 
-        const sql = "INSERT INTO produtos(nome, preco) VALUES(?, ?)"
+        res.status(201).json(result)
 
-        db.query(sql, [nome, preco], (err, result) => {
-            if (err) return res.status(500).json({ erro: "Erro no servidor" })
-
-            return res.status(201).json({
-                mensagem: "Produto criado",
-                id: result.insertId
-            })
-        })
-    }
-    catch(error){
+    } catch(error){
         next(error)
     }
+
 }
 
-exports.getProducts = (req, res, next) => {
+exports.getProducts = async(req, res, next) => {
 
     try{
-        db.query("SELECT * FROM produtos", (err, result) => {
-        if (err) return res.status(500).json({ erro: "Erro no servidor" })
 
-        return res.json(result)
-    })
-    }
-    catch(error){
+        const produtos = await productService.getProducts()
+
+        res.status(200).json(produtos)
+
+    } catch(error){
         next(error)
     }
+
 }

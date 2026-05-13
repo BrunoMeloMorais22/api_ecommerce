@@ -1,56 +1,37 @@
-const db = require('../config/db')
+const orderService = require('../services/orderService')
 
-exports.createOrder = (req, res, next) => {
+exports.createOrder = async(req, res, next) => {
 
     try{
+
         const usuario_id = req.usuarioId
 
-        const sqlCarrinho = `
-            SELECT produtos.preco, carrinho.quantidade
-            FROM carrinho
-            JOIN produtos ON carrinho.produto_id = produtos.id
-            WHERE carrinho.usuario_id = ?
-        `
+        const result = await orderService.createOrder(
+            usuario_id
+        )
 
-        db.query(sqlCarrinho, [usuario_id], (err, result) => {
+        res.status(201).json(result)
 
-        if (result.length === 0) {
-            return res.status(400).json({ erro: "Carrinho vazio" })
-        }
-
-        const total = result.reduce((acc, item) => {
-            return acc + (item.preco * item.quantidade)
-        }, 0)
-
-        const sqlPedido = "INSERT INTO pedidos(usuario_id, total) VALUES(?, ?)"
-
-        db.query(sqlPedido, [usuario_id, total], (err, pedidoResult) => {
-
-            db.query("DELETE FROM carrinho WHERE usuario_id = ?", [usuario_id])
-
-            return res.status(201).json({
-                mensagem: "Pedido criado",
-                pedido_id: pedidoResult.insertId,
-                total
-            })
-        })
-    })
-    }
-    catch(error){
+    } catch(error){
         next(error)
     }
+
 }
 
-exports.getOrders = (req, res, next) => {
+exports.getOrders = async(req, res, next) => {
 
     try{
+
         const usuario_id = req.usuarioId
 
-        db.query("SELECT * FROM pedidos WHERE usuario_id = ?", [usuario_id], (err, result) => {
-            return res.json(result)
-        })
-    }
-    catch(error){
+        const pedidos = await orderService.getOrders(
+            usuario_id
+        )
+
+        res.status(200).json(pedidos)
+
+    } catch(error){
         next(error)
     }
+
 }
