@@ -1,8 +1,21 @@
+const { ZodError } = require('zod')
 
 module.exports = (err, req, res, next) => {
-    console.error(err)
 
-    return res.status(err.status || 500).json({
-        error: err.message || "Erro interno no servidor"
+    console.log(err)
+
+    console.log(err instanceof ZodError)
+
+    if(err instanceof ZodError){
+
+        return res.status(400).json({
+            errors: err.errors
+        })
+
+    }
+
+    return res.status(500).json({
+        error: "Erro interno no servidor"
     })
+
 }

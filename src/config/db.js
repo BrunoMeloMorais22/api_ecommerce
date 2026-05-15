@@ -1,19 +1,28 @@
 const mysql = require('mysql2')
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "passport",
-    database: "api_ecommerce"
+    host: 'localhost',
+    user: 'root',
+    password: 'passport',
+    database: 'api_ecommerce'
 })
 
-db.connect((err) => {
-    if (err){
-        console.log("Erro ao se conectar:", err)
-    }
-    else{
-        console.log("Conectado ao Banco de Dados")
-    }
-})
+function connectDB(){
 
-module.exports = db
+    db.connect((err) => {
+
+        if(err){
+            console.log('Erro ao conectar:', err)
+            return
+        }
+
+        console.log('Banco conectado')
+
+    })
+
+}
+
+module.exports = {
+    db,
+    connectDB
+}

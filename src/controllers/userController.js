@@ -1,10 +1,14 @@
 const db = require('../config/db')
 
 const userService = require('../services/userService')
+const { registerSchema } = require('../validators/userValidators')
+const { loginSchema } = require('../validators/userValidators')
 
 exports.register = async(req, res, next) => {
 
     try{
+
+        registerSchema.parse(req.body)
 
         const { nome, email, senha } = req.body
 

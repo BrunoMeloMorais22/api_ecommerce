@@ -1,6 +1,8 @@
 const bcrypt = require('bcrypt')
 
 const userRepository = require('../repositories/userRepository')
+const { registerSchema } = require('../validators/userValidators')
+const jwt = require('jsonwebtoken')
 
 exports.register = async(nome, email, senha) => {
 
