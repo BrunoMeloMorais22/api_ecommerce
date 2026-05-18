@@ -7,22 +7,13 @@ const db = mysql.createConnection({
     database: 'api_ecommerce'
 })
 
-function connectDB(){
+db.connect((err) => {
+    if (err) {
+        console.log('Erro ao conectar:', err)
+        return
+    }
 
-    db.connect((err) => {
+    console.log('Banco conectado')
+})
 
-        if(err){
-            console.log('Erro ao conectar:', err)
-            return
-        }
-
-        console.log('Banco conectado')
-
-    })
-
-}
-
-module.exports = {
-    db,
-    connectDB
-}
+module.exports = db
