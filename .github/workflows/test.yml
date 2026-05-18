@@ -15,7 +15,7 @@ jobs:
         image: mysql:8
 
         env:
-          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_PASSWORD: passport
           MYSQL_DATABASE: api_ecommerce
 
         ports:
@@ -42,3 +42,9 @@ jobs:
 
       - name: Rodar testes
         run: npm test
+        env:
+          DB_HOST: 127.0.0.1
+          DB_USER: root
+          DB_PASSWORD: passport
+          DB_NAME: api_ecommerce
+          JWT_SECRET: teste
