@@ -1,14 +1,12 @@
 const orderRepository = require('../repositories/orderRepository')
+const AppError = require('../utils/AppError')
 
 exports.createOrder = async(usuario_id) => {
 
     const carrinho = await orderRepository.getCartItems(usuario_id)
 
     if(carrinho.length === 0){
-        const error = new Error("Carrinho vazio")
-        error.status = 400
-
-        throw error
+        throw new AppError("Carrinho Vazio", 400)
     }
 
     const total = carrinho.reduce((acc, item) => {

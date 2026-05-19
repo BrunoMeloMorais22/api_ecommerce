@@ -1,25 +1,19 @@
 const bcrypt = require('bcrypt')
 
 const userRepository = require('../repositories/userRepository')
-const { registerSchema } = require('../validators/userValidators')
 const jwt = require('jsonwebtoken')
+const AppError = require('../utils/AppError.js')
 
-exports.register = async(nome, email, senha) => {
+exports.register = async(nome, email, senha, role) => {
 
     if(!nome || !email || !senha){
-        const error = new Error("Preencha todos os campos")
-        error.status = 400
-
-        throw error
+        throw new AppError("Preencha todos os campos", 400)
     }
 
     const usuarioExiste = await userRepository.findByEmail(email)
 
     if(usuarioExiste){
-        const error = new Error("Email já cadastrado")
-        error.status = 400
-
-        throw error
+        throw new AppError("Usuário já existe", 400)
     }
 
     const senhaHash = await bcrypt.hash(senha, 10)
@@ -27,7 +21,8 @@ exports.register = async(nome, email, senha) => {
     const usuario = await userRepository.createUser({
         nome,
         email,
-        senha: senhaHash
+        senha: senhaHash,
+        role
     })
 
     return {
@@ -39,19 +34,13 @@ exports.register = async(nome, email, senha) => {
 exports.login = async(email, senha) => {
 
     if(!email || !senha){
-        const error = new Error("Preencha todos os campos")
-        error.status = 400
-
-        throw error
+        throw new AppError("Preencha todos os campos", 404)
     }
 
     const usuario = await userRepository.findByEmail(email)
 
     if(!usuario){
-        const error = new Error("Usuário não encontrado")
-        error.status = 404
-
-        throw error
+        throw new AppError("Usuário não encontrado", 400)
     }
 
     const senhaValida = await bcrypt.compare(
@@ -60,15 +49,13 @@ exports.login = async(email, senha) => {
     )
 
     if(!senhaValida){
-        const error = new Error("Senha inválida")
-        error.status = 401
-
-        throw error
+        throw new AppError("Senha inválida", 401)
     }
 
     const token = jwt.sign(
         {
-            id: usuario.id
+            id: usuario.id,
+            role: usuario.role
         },
         process.env.JWT_SECRET,
         {

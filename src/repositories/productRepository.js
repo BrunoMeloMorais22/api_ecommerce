@@ -48,3 +48,50 @@ exports.getProducts = () => {
     })
 
 }
+
+exports.updateProduct = (id, nome, preco) => {
+
+    return new Promise((resolve, reject) => {
+
+        const sql = `
+            UPDATE produtos
+            SET nome = ?, preco = ?
+            WHERE id = ?
+        `
+
+        db.query(sql, [nome, preco, id], (err, result) => {
+
+            if(err){
+                return reject(err)
+            }
+
+            resolve(result)
+
+        })
+
+    })
+
+}
+
+exports.deleteProduct = (id) => {
+
+    return new Promise((resolve, reject) => {
+
+        const sql = `
+            DELETE FROM produtos
+            WHERE id = ?
+        `
+
+        db.query(sql, [id], (err, result) => {
+
+            if(err){
+                return reject(err)
+            }
+
+            resolve(result)
+
+        })
+
+    })
+
+}

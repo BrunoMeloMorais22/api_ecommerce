@@ -11,7 +11,10 @@ exports.createProduct = async(req, res, next) => {
             preco
         )
 
-        res.status(201).json(result)
+        res.status(201).json({
+        success: true,
+        data: result
+    })
 
     } catch(error){
         next(error)
@@ -25,7 +28,54 @@ exports.getProducts = async(req, res, next) => {
 
         const produtos = await productService.getProducts()
 
-        res.status(200).json(produtos)
+        res.status(200).json({
+        success: true,
+        data: result
+    })
+
+    } catch(error){
+        next(error)
+    }
+
+}
+
+exports.updateProduct = async(req, res, next) => {
+
+    try {
+
+        const { id } = req.params
+
+        const { nome, preco } = req.body
+
+        const result = await productService.updateProduct(
+            id,
+            nome,
+            preco
+        )
+
+        return res.status(200).json({
+            success: true,
+            data: result
+        })
+
+    } catch(error){
+        next(error)
+    }
+
+}
+
+exports.deleteProduct = async(req, res, next) => {
+
+    try {
+
+        const { id } = req.params
+
+        const result = await productService.deleteProduct(id)
+
+        return res.status(200).json({
+            success: true,
+            data: result
+        })
 
     } catch(error){
         next(error)

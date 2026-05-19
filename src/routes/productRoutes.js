@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const productController = require('../controllers/productController')
+const authorize = require('../middlewares/authorize')
+const auth = require('../middlewares/auth')
 
 
 /**
@@ -43,7 +45,7 @@ const productController = require('../controllers/productController')
  *       500:
  *         description: Erro interno do servidor
  */
-router.post("/produtos", productController.createProduct)
+router.post("/produtos", auth, authorize('admin'), productController.createProduct)
 
 /**
  * @swagger
@@ -80,5 +82,9 @@ router.post("/produtos", productController.createProduct)
  *         description: Erro interno do servidor
  */
 router.get("/produtos", productController.getProducts)
+
+router.put('/produtos/:id',auth,authorize('admin'),productController.updateProduct)
+
+router.delete('/produtos/:id',auth,authorize('admin'),productController.deleteProduct)
 
 module.exports = router

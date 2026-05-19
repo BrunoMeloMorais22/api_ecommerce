@@ -1,4 +1,4 @@
-const db = require('../config/db')
+
 
 const userService = require('../services/userService')
 const { registerSchema } = require('../validators/userValidators')
@@ -10,15 +10,19 @@ exports.register = async(req, res, next) => {
 
         registerSchema.parse(req.body)
 
-        const { nome, email, senha } = req.body
+        const { nome, email, senha, role } = req.body
 
         const result = await userService.register(
             nome,
             email,
-            senha
+            senha,
+            role
         )
 
-        res.status(201).json(result)
+        res.status(201).json({
+        success: true,
+        data: result
+    })
 
     } catch(error){
         next(error)
@@ -37,7 +41,10 @@ exports.login = async(req, res, next) => {
             senha
         )
 
-        res.status(200).json(result)
+        res.status(200).json({
+        success: true,
+        data: result
+    })
 
     } catch(error){
         next(error)

@@ -14,7 +14,10 @@ exports.addToCart = async(req, res, next) => {
             quantidade
         )
 
-        res.status(200).json(result)
+        res.status(200).json({
+        success: true,
+        data: result
+    })
 
     } catch(error){
         next(error)
@@ -32,7 +35,10 @@ exports.getCart = async(req, res, next) => {
             usuario_id
         )
 
-        res.status(200).json(carrinho)
+        res.status(200).json({
+        success: true,
+        data: result
+    })
 
     } catch(error){
         next(error)

@@ -10,7 +10,10 @@ exports.createOrder = async(req, res, next) => {
             usuario_id
         )
 
-        res.status(201).json(result)
+        res.status(201).json({
+        success: true,
+        data: result
+    })
 
     } catch(error){
         next(error)
@@ -28,7 +31,10 @@ exports.getOrders = async(req, res, next) => {
             usuario_id
         )
 
-        res.status(200).json(pedidos)
+        res.status(200).json({
+        success: true,
+        data: result
+    })
 
     } catch(error){
         next(error)

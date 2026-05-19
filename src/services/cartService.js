@@ -1,12 +1,10 @@
 const cartRepository = require('../repositories/cartRepository')
+const AppError = require('../utils/AppError')
 
 exports.addToCart = async(usuario_id, produto_id, quantidade) => {
 
     if(!produto_id || !quantidade || quantidade <= 0){
-        const error = new Error("Dados inválidos")
-        error.status = 400
-
-        throw error
+        throw new AppError("Preencha todos os campos", 400)
     }
 
     await cartRepository.addToCart(

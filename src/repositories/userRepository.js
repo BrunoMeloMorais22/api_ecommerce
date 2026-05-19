@@ -1,4 +1,4 @@
-const  { db }  = require('../config/db')
+const db = require('../config/db')
 
 exports.findByEmail = (email) => {
 
@@ -25,13 +25,13 @@ exports.createUser = (data) => {
     return new Promise((resolve, reject) => {
 
         const sql = `
-            INSERT INTO usuarios(nome, email, senha)
-            VALUES (?, ?, ?)
+            INSERT INTO usuarios(nome, email, senha, role)
+            VALUES (?, ?, ?, ?)
         `
 
         db.query(
             sql,
-            [data.nome, data.email, data.senha],
+            [data.nome, data.email, data.senha, data.role],
             (err, result) => {
 
                 if(err){
