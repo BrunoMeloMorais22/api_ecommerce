@@ -1,3 +1,4 @@
+const redisClient = require('../config/redis')
 const productRepository = require('../repositories/productRepository')
 const AppError = require('../utils/AppError')
 
@@ -21,7 +22,25 @@ exports.createProduct = async(nome, preco) => {
 
 exports.getProducts = async() => {
 
+    const cache = await redisClient.get('produtos')
+
+    if(cache){
+        console.log('Produtos vindo do redis')
+        return JSON.parse(cache)
+    }
+
+    console.log('Produtos vindo do Banco')
+
     const produtos = await productRepository.getProducts()
+
+    await redisClient.set(
+        'produtos',
+        JSON.stringify(produtos),
+        {
+            EX: 60
+        }
+    )
+
 
     return produtos
 

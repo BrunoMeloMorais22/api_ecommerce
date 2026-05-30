@@ -83,8 +83,8 @@ router.post("/produtos", auth, authorize('Admin'), productController.createProdu
  */
 router.get("/produtos", productController.getProducts)
 
-router.put('/produtos/:id',auth,authorize('admin'),productController.updateProduct)
+router.put('/produtos/:id',auth,authorize('Admin'),productController.updateProduct)
 
-router.delete('/produtos/:id',auth,authorize('admin'),productController.deleteProduct)
+router.delete('/produtos/:id',auth,authorize('Admin'),productController.deleteProduct)
 
 module.exports = router

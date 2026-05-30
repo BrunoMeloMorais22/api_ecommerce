@@ -26,7 +26,7 @@ exports.getProducts = async(req, res, next) => {
 
     try{
 
-        const produtos = await productService.getProducts()
+        const result = await productService.getProducts()
 
         res.status(200).json({
         success: true,
@@ -43,12 +43,12 @@ exports.updateProduct = async(req, res, next) => {
 
     try {
 
-        const { id } = req.params
+        const { id } = Number(req.params.id)
 
         const { nome, preco } = req.body
 
         const result = await productService.updateProduct(
-            id,
+            Number(req.params.id),
             nome,
             preco
         )

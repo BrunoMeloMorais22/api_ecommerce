@@ -3,7 +3,6 @@ const app = require('../app')
 const e = require('express')
 const { login } = require('../services/userService')
 
-
 test('Usuário comum não pode cadastrar produto', async() => {
     const loginResponse = await request(app)
         .post('/routes/login')
@@ -43,4 +42,36 @@ test('Admin pode cadastrar produtos', async() => {
         })
     
     expect(response.status).toBe(201)
+})
+
+
+test('Deve alterar produto', async() => {
+    const loginResponse = await request(app)
+        .post('/routes/login')
+        .send({
+            email: "bruno@gmail.com",
+            senha: "Bruno@2245"
+        })
+
+    console.log(loginResponse.body)
+    const tokenAdmin = loginResponse.body.data.token
+    
+    const response = await request(app)
+        .put('/routes/produtos/1')
+        .set('Authorization', `Bearer ${tokenAdmin}`)
+        .send({
+            nome: "Camisa do Corinthians",
+            preco: 6000
+        })
+
+    expect(response.status).toBe(200)
+})
+
+
+test('Buscar os produtos', async() => {
+    const response = await request(app)
+        .get('/routes/produtos')
+    
+    console.log(response.body)
+    expect(response.status).toBe(200)
 })
