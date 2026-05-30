@@ -1,50 +1,16 @@
-const db = require('../config/db')
 
-exports.findByEmail = (email) => {
+const { PrismaClient } = require('@prisma/client')
 
-    return new Promise((resolve, reject) => {
+const prisma = new PrismaClient()
 
-        const sql = "SELECT * FROM usuarios WHERE email = ?"
-
-        db.query(sql, [email], (err, result) => {
-
-            if(err){
-                reject(err)
-            }
-
-            resolve(result[0])
-
-        })
-
+exports.findByEmail = async (email) => {
+    return await prisma.usuario.findUnique({
+        where: { email }
     })
-
 }
 
-exports.createUser = (data) => {
-
-    return new Promise((resolve, reject) => {
-
-        const sql = `
-            INSERT INTO usuarios(nome, email, senha, role)
-            VALUES (?, ?, ?, ?)
-        `
-
-        db.query(
-            sql,
-            [data.nome, data.email, data.senha, data.role],
-            (err, result) => {
-
-                if(err){
-                    reject(err)
-                }
-
-                resolve({
-                    id: result.insertId
-                })
-
-            }
-        )
-
+exports.createUser = async (data) => {
+    return await prisma.usuario.create({
+        data
     })
-
 }

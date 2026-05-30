@@ -1,95 +1,42 @@
-const db = require('../config/db')
+const { PrismaClient } = require('@prisma/client')
 
-exports.getCartItems = (usuario_id) => {
+const prisma = new PrismaClient()
 
-    return new Promise((resolve, reject) => {
-
-        const sql = `
-            SELECT produtos.preco, carrinho.quantidade
-            FROM carrinho
-            JOIN produtos
-            ON carrinho.produto_id = produtos.id
-            WHERE carrinho.usuario_id = ?
-        `
-
-        db.query(sql, [usuario_id], (err, result) => {
-
-            if(err){
-                reject(err)
-            }
-
-            resolve(result)
-
-        })
-
+exports.getCartItems = async (usuarioId) => {
+    return await prisma.carrinho.findMany({
+        where: {
+            usuarioId
+        },
+        include: {
+            produto: true
+        }
     })
-
 }
 
-exports.createOrder = (usuario_id, total) => {
-
-    return new Promise((resolve, reject) => {
-
-        const sql = `
-            INSERT INTO pedidos(usuario_id, total)
-            VALUES (?, ?)
-        `
-
-        db.query(sql, [usuario_id, total], (err, result) => {
-
-            if(err){
-                reject(err)
-            }
-
-            resolve({
-                id: result.insertId
-            })
-
-        })
-
+exports.createOrder = async (usuarioId, total) => {
+    return await prisma.pedido.create({
+        data: {
+            usuarioId,
+            total
+        }
     })
-
 }
 
-exports.clearCart = (usuario_id) => {
-
-    return new Promise((resolve, reject) => {
-
-        const sql = "DELETE FROM carrinho WHERE usuario_id = ?"
-
-        db.query(sql, [usuario_id], (err, result) => {
-
-            if(err){
-                reject(err)
-            }
-
-            resolve(result)
-
-        })
-
+exports.clearCart = async (usuarioId) => {
+    return await prisma.carrinho.deleteMany({
+        where: {
+            usuarioId
+        }
     })
-
 }
 
-exports.getOrders = (usuario_id) => {
-
-    return new Promise((resolve, reject) => {
-
-        const sql = `
-            SELECT * FROM pedidos
-            WHERE usuario_id = ?
-        `
-
-        db.query(sql, [usuario_id], (err, result) => {
-
-            if(err){
-                reject(err)
-            }
-
-            resolve(result)
-
-        })
-
+exports.getOrders = async (usuarioId) => {
+    return await prisma.pedido.findMany({
+        where: {
+            usuarioId
+        },
+        include: {
+            usuario: true
+        }
     })
-
 }

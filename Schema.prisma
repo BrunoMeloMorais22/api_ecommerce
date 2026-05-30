@@ -1,0 +1,51 @@
+
+model Usuario {
+    id Int @id @default(autoincrement())
+
+    nome String
+    email String @unique
+    senha String
+    role String
+
+    pedidos Pedido[]
+    carrinhos Carrinho[]
+}
+
+model Pedido {
+    id Int @id @default(autoincrement())
+
+    usuarioId Int
+    total Float
+
+    usuario Usuario @relation(fields: [usuarioId],references: [id])
+}
+
+model Produto {
+    id Int @id @default(autoincrement())
+
+    nome String
+    preco Float
+
+    carrinhos Carrinho[]
+}
+
+model Carrinho {
+    id Int @id @default(autoincrement())
+
+    usuarioId Int
+    produtoId Int
+    quantidade Int
+
+    usuario Usuario @relation(fields: [usuarioId], references: [id])
+
+    produto Produto @relation(fields: [produtoId], references: [id])
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}

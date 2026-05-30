@@ -1,66 +1,32 @@
-const db = require('../config/db')
+const { PrismaClient } = require('@prisma/client')
 
-exports.addToCart = (
-    usuario_id,
-    produto_id,
+const prisma = new PrismaClient()
+
+exports.addToCart = async (
+    usuarioId,
+    produtoId,
     quantidade
 ) => {
 
-    return new Promise((resolve, reject) => {
-
-        const sql = `
-            INSERT INTO carrinho(
-                usuario_id,
-                produto_id,
-                quantidade
-            )
-            VALUES (?, ?, ?)
-        `
-
-        db.query(
-            sql,
-            [usuario_id, produto_id, quantidade],
-            (err, result) => {
-
-                if(err){
-                    reject(err)
-                }
-
-                resolve(result)
-
-            }
-        )
-
+    return await prisma.carrinho.create({
+        data: {
+            usuarioId,
+            produtoId,
+            quantidade
+        }
     })
 
 }
 
-exports.getCart = (usuario_id) => {
+exports.getCart = async (usuarioId) => {
 
-    return new Promise((resolve, reject) => {
-
-        const sql = `
-            SELECT 
-                carrinho.id,
-                produtos.nome,
-                produtos.preco,
-                carrinho.quantidade
-            FROM carrinho
-            JOIN produtos
-            ON carrinho.produto_id = produtos.id
-            WHERE carrinho.usuario_id = ?
-        `
-
-        db.query(sql, [usuario_id], (err, result) => {
-
-            if(err){
-                reject(err)
-            }
-
-            resolve(result)
-
-        })
-
+    return await prisma.carrinho.findMany({
+        where: {
+            usuarioId
+        },
+        include: {
+            produto: true
+        }
     })
 
 }

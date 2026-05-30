@@ -45,7 +45,7 @@ const auth = require('../middlewares/auth')
  *       500:
  *         description: Erro interno do servidor
  */
-router.post("/produtos", auth, authorize('admin'), productController.createProduct)
+router.post("/produtos", auth, authorize('Admin'), productController.createProduct)
 
 /**
  * @swagger
