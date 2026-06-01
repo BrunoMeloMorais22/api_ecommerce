@@ -20,7 +20,7 @@ exports.register = async(nome, email, senha, role) => {
         nome,
         email,
         senha: senhaHash,
-        role
+        role: "User"
     })
 
     return {
@@ -38,9 +38,8 @@ exports.login = async(email, senha) => {
     const usuario = await userRepository.findByEmail(email)
 
     if(!usuario){
-        throw new AppError("Usuário não encontrado", 400)
-
         logger.warn(`Erro no login do usuário ${email}`)
+        throw new AppError("Credenciais inválidas", 401)
     }
 
     const senhaValida = await bcrypt.compare(
@@ -49,7 +48,7 @@ exports.login = async(email, senha) => {
     )
 
     if(!senhaValida){
-        throw new AppError("Senha inválida", 401)
+        throw new AppError("Credenciais inválidas", 401)
         
     }
 
@@ -69,4 +68,39 @@ exports.login = async(email, senha) => {
         token
     }
 
+}
+
+exports.getUsers = async () => {
+    const users = await userRepository.findAll()
+
+    return users.map(user => ({
+        id: user.id,
+        nome: user.nome,
+        email: user.email,
+        role: user.role
+    }))
+}
+
+exports.updateUsers = async (id, userLogado, roleLogado, data) => {
+
+    const user = await userRepository.findById(id)
+
+    if (!user) {
+        throw new AppError('Usuário não encontrado', 404)
+    }
+
+    const isOwner = Number(id) === Number(userLogado)
+    const isAdmin = roleLogado === 'ADMIN'
+
+    if (!isOwner && !isAdmin) {
+        throw new AppError('Acesso negado', 403)
+    }
+
+    const updateData = {
+        nome: data.nome,
+        email: data.email,
+        senha: data.senha
+    }
+
+    return await userRepository.update(id, updateData)
 }

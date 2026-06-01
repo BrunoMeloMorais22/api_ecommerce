@@ -2,6 +2,8 @@ const express = require('express')
 const router = express.Router()
 const userController = require('../controllers/userController')
 const limiter = require('../middlewares/rateLimiter')
+const authorize = require('../middlewares/authorize')
+const authMiddleware = require('../middlewares/auth')
 
 console.log(userController)
 /**
@@ -82,5 +84,9 @@ router.post("/login", limiter, userController.login)
  *         description: Erro interno do servidor
  */
 router.post("/register", userController.register)
+
+router.get('/users', authMiddleware, authorize('Admin'), userController.getUsers)
+
+router.put('/users/:id', authMiddleware, authorize('Admin'), userController.updateUsers)
 
 module.exports = router

@@ -9,6 +9,17 @@ test("Deve responder com status 200", async () => {
     expect(response.status).toBe(200)
 })
 
+test('Deve cadastrar usuário', async() => {
+    const registerResponse = await request(app)
+        .post('/routes/register')
+        .send({
+            nome: "Bruno Melo",
+            email: "bruno@gmail.com",
+            senha: "Bruno@2245"
+        })
+    expect(registerResponse.status).toBe(201)
+})
+
 test('Deve fazer Login', async () => {
     const login = await request(app)
     .post('/routes/login')

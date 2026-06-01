@@ -9,3 +9,67 @@
 {"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-05-31T23:48:11.004Z"}
 {"level":"warn","message":"Tentativa de cadastro com email já existente bruno@gmail.com","timestamp":"2026-05-31T23:48:11.010Z"}
 {"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-05-31T23:48:11.011Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-01T00:55:54.023Z"}
+{"level":"info","message":"Usuário cadastrado com sucesso","timestamp":"2026-06-01T00:55:54.256Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T00:55:54.295Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-01T00:55:54.420Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-01T00:55:54.433Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente bruno@gmail.com","timestamp":"2026-06-01T00:55:54.441Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-06-01T00:55:54.445Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T00:59:17.162Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-01T00:59:17.423Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T00:59:36.660Z"}
+{"level":"warn","message":"Erro no login do usuário brun@gmail.com","timestamp":"2026-06-01T00:59:36.666Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-01T00:59:36.667Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-01T01:06:17.381Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente bruno@gmail.com","timestamp":"2026-06-01T01:06:17.567Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-06-01T01:06:17.568Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-01T01:06:32.605Z"}
+{"level":"info","message":"Usuário cadastrado com sucesso","timestamp":"2026-06-01T01:06:32.711Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-01T01:06:46.875Z"}
+{"level":"info","message":"Usuário cadastrado com sucesso","timestamp":"2026-06-01T01:06:46.941Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T01:07:56.566Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-01T01:07:56.652Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T01:14:04.028Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-01T01:14:04.303Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-01T12:31:30.087Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente gustavo@gmail.com","timestamp":"2026-06-01T12:31:30.197Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-06-01T12:31:30.198Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-01T12:31:43.862Z"}
+{"level":"info","message":"Usuário cadastrado com sucesso","timestamp":"2026-06-01T12:31:43.992Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T12:35:50.058Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-01T12:35:50.141Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T12:36:26.163Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-01T12:36:26.237Z"}
+{"level":"info","message":"Tentativa de alteração de dados do usuário iniciada","timestamp":"2026-06-01T12:37:07.986Z"}
+{"level":"error","message":"Erro ao alterar usuário","timestamp":"2026-06-01T12:37:08.017Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T12:38:22.463Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-01T12:38:22.630Z"}
+{"level":"info","message":"Tentativa de alteração de dados do usuário iniciada","timestamp":"2026-06-01T12:38:40.656Z"}
+{"level":"error","message":"Erro ao alterar usuário","timestamp":"2026-06-01T12:38:40.660Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T12:41:27.751Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-01T12:41:27.934Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T12:42:31.737Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-01T12:42:31.826Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T12:56:35.463Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-01T12:56:35.744Z"}
+{"level":"info","message":"Tentativa de alteração de dados do usuário iniciada","timestamp":"2026-06-01T12:57:09.587Z"}
+{"level":"error","message":"Erro ao alterar usuário","timestamp":"2026-06-01T12:57:09.595Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T12:59:27.566Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-01T12:59:27.823Z"}
+{"level":"info","message":"Tentativa de alteração de dados do usuário iniciada","timestamp":"2026-06-01T12:59:47.644Z"}
+{"level":"error","message":"Erro ao alterar usuário","timestamp":"2026-06-01T12:59:47.650Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T13:02:44.759Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-01T13:02:44.881Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-01T13:03:14.996Z"}
+{"level":"error","message":"Erro ao atualizar usuário","timestamp":"2026-06-01T13:03:15.000Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-01T13:03:23.705Z"}
+{"level":"info","message":"Usuário atualizado com sucesso","timestamp":"2026-06-01T13:03:23.772Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-01T13:03:55.371Z"}
+{"level":"info","message":"Usuário atualizado com sucesso","timestamp":"2026-06-01T13:03:55.379Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-01T13:04:00.201Z"}
+{"level":"info","message":"Usuário atualizado com sucesso","timestamp":"2026-06-01T13:04:00.207Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-01T13:04:41.639Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-01T13:04:41.701Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-01T13:05:07.954Z"}
+{"level":"error","message":"Erro ao atualizar usuário","timestamp":"2026-06-01T13:05:07.956Z"}

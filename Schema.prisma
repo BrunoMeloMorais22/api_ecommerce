@@ -5,7 +5,8 @@ model Usuario {
     nome String
     email String @unique
     senha String
-    role String
+
+    role Role @default(User)
 
     pedidos Pedido[]
     carrinhos Carrinho[]
@@ -40,6 +41,12 @@ model Carrinho {
 
     produto Produto @relation(fields: [produtoId], references: [id])
 }
+
+enum Role {
+    User
+    Admin
+}
+
 
 generator client {
     provider = "prisma-client-js"
