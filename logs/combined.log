@@ -1,0 +1,11 @@
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-05-31T23:29:12.042Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-05-31T23:29:12.391Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-05-31T23:31:17.318Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-05-31T23:31:17.513Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-05-31T23:46:17.723Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-05-31T23:46:17.814Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-05-31T23:48:10.886Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-05-31T23:48:10.994Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-05-31T23:48:11.004Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente bruno@gmail.com","timestamp":"2026-05-31T23:48:11.010Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-05-31T23:48:11.011Z"}

@@ -20,3 +20,14 @@ test('Deve fazer Login', async () => {
     expect(login.status).toBe(200)
 })
 
+test('Deve dar email já existente ', async() => {
+    const registerResponse = await request(app)
+        .post('/routes/register')
+        .send({
+            nome: "Matheus Brasil",
+            email: "bruno@gmail.com",
+            senha: "Bruno@2245"
+        })
+    expect(registerResponse.status).toBe(400)
+})
+

@@ -3,8 +3,11 @@
 const userService = require('../services/userService')
 const { registerSchema } = require('../validators/userValidators')
 const { loginSchema } = require('../validators/userValidators')
+const logger = require('../config/logger')
 
 exports.register = async(req, res, next) => {
+
+    logger.info('Tentativa de cadastro iniciada')
 
     try{
 
@@ -19,19 +22,22 @@ exports.register = async(req, res, next) => {
             role
         )
 
+        logger.info('Usuário cadastrado com sucesso')
+
         res.status(201).json({
         success: true,
         data: result
     })
 
     } catch(error){
-        console.log(error)
+        logger.error('Erro ao cadastrar usuário')
         next(error)
     }
 
 }
 
 exports.login = async(req, res, next) => {
+    logger.info('Tentativa de login iniciada')
 
     try{
 
@@ -42,12 +48,15 @@ exports.login = async(req, res, next) => {
             senha
         )
 
+        logger.info('Login realizado com sucesso')
+
         res.status(200).json({
         success: true,
         data: result
     })
 
     } catch(error){
+        logger.error('Erro ao fazer login')
         next(error)
     }
 

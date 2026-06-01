@@ -3,16 +3,14 @@ const bcrypt = require('bcrypt')
 const userRepository = require('../repositories/userRepository')
 const jwt = require('jsonwebtoken')
 const AppError = require('../utils/AppError.js')
+const logger = require('../config/logger.js')
 
 exports.register = async(nome, email, senha, role) => {
-
-    if(!nome || !email || !senha){
-        throw new AppError("Preencha todos os campos", 400)
-    }
 
     const usuarioExiste = await userRepository.findByEmail(email)
 
     if(usuarioExiste){
+        logger.warn(`Tentativa de cadastro com email já existente ${email}`)
         throw new AppError("Usuário já existe", 400)
     }
 
@@ -41,6 +39,8 @@ exports.login = async(email, senha) => {
 
     if(!usuario){
         throw new AppError("Usuário não encontrado", 400)
+
+        logger.warn(`Erro no login do usuário ${email}`)
     }
 
     const senhaValida = await bcrypt.compare(
@@ -50,6 +50,7 @@ exports.login = async(email, senha) => {
 
     if(!senhaValida){
         throw new AppError("Senha inválida", 401)
+        
     }
 
     const token = jwt.sign(

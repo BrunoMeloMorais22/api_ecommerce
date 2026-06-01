@@ -1,6 +1,9 @@
+const logger = require('../config/logger')
 const productService = require('../services/productService')
 
 exports.createProduct = async(req, res, next) => {
+
+    logger.info('Tentativa de cadastro de produto iniciada')
 
     try{
 
@@ -11,12 +14,15 @@ exports.createProduct = async(req, res, next) => {
             preco
         )
 
+        logger.info('Produto cadastrado com sucesso')
+
         res.status(201).json({
         success: true,
         data: result
     })
 
     } catch(error){
+        logger.error('Erro ao cadastrar produto')
         next(error)
     }
 
@@ -41,6 +47,8 @@ exports.getProducts = async(req, res, next) => {
 
 exports.updateProduct = async(req, res, next) => {
 
+    logger.info('Tentaiva de alteração de produto iniciada')
+    
     try {
 
         const { id } = Number(req.params.id)
@@ -53,12 +61,15 @@ exports.updateProduct = async(req, res, next) => {
             preco
         )
 
+        logger.info('Produto atualizado com sucesso')
+
         return res.status(200).json({
             success: true,
             data: result
         })
 
     } catch(error){
+        logger.error('Erro ao atualizar produto')
         next(error)
     }
 
