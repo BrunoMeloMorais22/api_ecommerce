@@ -27,7 +27,7 @@ test('Admin pode cadastrar produtos', async() => {
         .post('/routes/login')
         .send({
             email: "bruno@gmail.com",
-            senha: "Bruno@2245"
+            senha: "Admin@123"
         })
 
     console.log(loginResponse.body)
@@ -37,36 +37,33 @@ test('Admin pode cadastrar produtos', async() => {
         .post('/routes/produtos')
         .set('Authorization', `Bearer ${tokenAdmin}`)
         .send({
-            nome: "Notebook Gamer",
-            preco: 5000
+            nome: "Iphone 13 128GB ",
+            preco: 2000
         })
     
     expect(response.status).toBe(201)
 })
 
-
-test('Deve alterar produto', async() => {
+test('Deve atualizar o produto(apenas o admin pode atualizar)', async() => {
     const loginResponse = await request(app)
         .post('/routes/login')
         .send({
-            email: "bruno@gmail.com",
-            senha: "Bruno@2245"
+            email: 'bruno@gmail.com',
+            senha: 'Admin@123'
         })
-
     console.log(loginResponse.body)
-    const tokenAdmin = loginResponse.body.data.token
-    
-    const response = await request(app)
-        .put('/routes/produtos/1')
+    tokenAdmin = loginResponse.body.data.token
+
+    const updateResponse = await request(app)
+        .put('/routes/produtos/2')
         .set('Authorization', `Bearer ${tokenAdmin}`)
         .send({
-            nome: "Camisa do Corinthians",
-            preco: 6000
+            nome: 'Camisa do Corinthians',
+            preco: 450
         })
-
-    expect(response.status).toBe(200)
+    
+    expect(updateResponse.status).toBe(200)
 })
-
 
 test('Buscar os produtos', async() => {
     const response = await request(app)

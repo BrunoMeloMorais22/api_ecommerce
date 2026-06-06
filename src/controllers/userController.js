@@ -4,8 +4,6 @@ const userService = require('../services/userService')
 const { registerSchema } = require('../validators/userValidators')
 const { loginSchema } = require('../validators/userValidators')
 const logger = require('../config/logger')
-const { success } = require('zod')
-const { tr } = require('zod/v4/locales')
 
 exports.register = async(req, res, next) => {
 

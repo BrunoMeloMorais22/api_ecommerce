@@ -98,8 +98,11 @@ exports.updateUsers = async (id, userLogado, roleLogado, data) => {
 
     const updateData = {
         nome: data.nome,
-        email: data.email,
-        senha: data.senha
+        email: data.email
+    }
+
+    if (data.senha) {
+        updateData.senha = await bcrypt.hash(data.senha, 10)
     }
 
     return await userRepository.update(id, updateData)
