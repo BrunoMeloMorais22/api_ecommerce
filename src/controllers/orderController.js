@@ -4,7 +4,7 @@ exports.createOrder = async(req, res, next) => {
 
     try{
 
-        const usuario_id = req.usuarioId
+        const usuario_id = req.user.id
 
         const result = await orderService.createOrder(
             usuario_id
@@ -25,7 +25,7 @@ exports.getOrders = async(req, res, next) => {
 
     try{
 
-        const usuario_id = req.usuarioId
+        const usuario_id = req.user.id
 
         const pedidos = await orderService.getOrders(
             usuario_id
@@ -33,7 +33,7 @@ exports.getOrders = async(req, res, next) => {
 
         res.status(200).json({
         success: true,
-        data: result
+        data: pedidos
     })
 
     } catch(error){

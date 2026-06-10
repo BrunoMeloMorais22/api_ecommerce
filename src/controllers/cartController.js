@@ -6,7 +6,9 @@ exports.addToCart = async(req, res, next) => {
 
         const { produto_id, quantidade } = req.body
 
-        const usuario_id = req.usuarioId
+        const usuario_id = req.user.id
+        console.log(req.user)
+        console.log(req.user.id)
 
         const result = await cartService.addToCart(
             usuario_id,
@@ -16,7 +18,7 @@ exports.addToCart = async(req, res, next) => {
 
         res.status(200).json({
         success: true,
-        data: carrinho
+        data: result
     })
 
     } catch(error){
@@ -29,7 +31,7 @@ exports.getCart = async(req, res, next) => {
 
     try{
 
-        const usuario_id = req.usuarioId
+        const usuario_id = req.user.id
 
         const carrinho = await cartService.getCart(
             usuario_id
@@ -37,7 +39,7 @@ exports.getCart = async(req, res, next) => {
 
         res.status(200).json({
         success: true,
-        data: result
+        data: carrinho
     })
 
     } catch(error){

@@ -3,21 +3,28 @@ const AppError = require('../utils/AppError')
 
 exports.createOrder = async(usuario_id) => {
 
-    const carrinho = await orderRepository.getCartItems(usuario_id)
+    console.log('Entrou no service')
 
+    const carrinho = await orderRepository.getCartItems(usuario_id)
+    
+    console.log(' Pegou o carrinho')
+        console.log(carrinho)
     if(carrinho.length === 0){
         throw new AppError("Carrinho Vazio", 400)
     }
 
     const total = carrinho.reduce((acc, item) => {
-        return acc + (item.preco * item.quantidade)
-    }, 0)
 
+    return acc + (Number(item.produto.preco) * Number(item.quantidade))
+
+}, 0)
+
+console.log("TOTAL", total)
+    console.log('TOTAL',total)
     const pedido = await orderRepository.createOrder(
         usuario_id,
         total
     )
-
     await orderRepository.clearCart(usuario_id)
 
     return {

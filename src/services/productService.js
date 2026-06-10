@@ -1,8 +1,12 @@
+const { Logger } = require('winston')
 const redisClient = require('../config/redis')
 const productRepository = require('../repositories/productRepository')
 const AppError = require('../utils/AppError')
+const logger = require('../config/logger')
 
 exports.createProduct = async(nome, preco) => {
+
+    logger.info("Tentativa de cadastro de produto iniciado")
 
     if(!nome || !preco || isNaN(preco) || preco <= 0){
         throw new AppError("Preencha todos os campos", 400)
@@ -13,6 +17,7 @@ exports.createProduct = async(nome, preco) => {
         preco
     })
 
+    logger.info("Produto cadastrado")
     return {
         mensagem: "Produto criado",
         id: produto.id
