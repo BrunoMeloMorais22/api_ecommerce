@@ -14,7 +14,8 @@ exports.createProduct = async(nome, preco, estoque) => {
 
     const produto = await productRepository.createProduct({
         nome,
-        preco
+        preco,
+        estoque
     })
 
     logger.info("Produto cadastrado")
@@ -65,7 +66,8 @@ exports.updateProduct = async (id, nome, preco, estoque) => {
     const result = await productRepository.updateProduct(
         id,
         nome,
-        preco
+        preco,
+        estoque
     )
 
     if(result.affectedRows === 0){

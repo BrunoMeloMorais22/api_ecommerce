@@ -1,37 +1,78 @@
 const orderRepository = require('../repositories/orderRepository')
 const AppError = require('../utils/AppError')
+const { PrismaClient } = require('@prisma/client')
 
+const prisma = new PrismaClient()
 exports.createOrder = async(usuario_id) => {
 
-    console.log('Entrou no service')
-
     const carrinho = await orderRepository.getCartItems(usuario_id)
-    
-    console.log(' Pegou o carrinho')
-        console.log(carrinho)
+
     if(carrinho.length === 0){
-        throw new AppError("Carrinho Vazio", 400)
+        throw new AppError("Carrinho vazio", 400)
     }
 
-    const total = carrinho.reduce((acc, item) => {
+    await prisma.$transaction(async (tx) => {
 
-    return acc + (Number(item.produto.preco) * Number(item.quantidade))
+        for(const item of carrinho){
 
-}, 0)
+            if(item.produto.estoque < item.quantidade){
+                throw new AppError(
+                    `Estoque insuficiente para ${item.produto.nome}`,
+                    400
+                )
+            }
 
-console.log("TOTAL", total)
-    console.log('TOTAL',total)
-    const pedido = await orderRepository.createOrder(
-        usuario_id,
-        total
-    )
-    await orderRepository.clearCart(usuario_id)
+        }
 
-    return {
-        mensagem: "Pedido criado",
-        pedido_id: pedido.id,
-        total
-    }
+        const total = carrinho.reduce((acc, item) => {
+            return acc + (
+                item.produto.preco *
+                item.quantidade
+            )
+        }, 0)
+
+        const pedido = await tx.pedido.create({
+            data: {
+                usuarioId: usuario_id,
+                total
+            }
+        })
+
+        for(const item of carrinho){
+
+            await tx.pedidoItem.create({
+                data: {
+                    pedidoId: pedido.id,
+                    produtoId: item.produtoId,
+                    quantidade: item.quantidade,
+                    precoUnitario: item.produto.preco
+                }
+            })
+
+        }
+
+        for(const item of carrinho){
+
+            await tx.produto.update({
+                where: {
+                    id: item.produtoId
+                },
+                data: {
+                    estoque:
+                        item.produto.estoque -
+                        item.quantidade
+                }
+            })
+
+        }
+
+        await tx.carrinho.deleteMany({
+            where: {
+                usuarioId: usuario_id
+            }
+        })
+
+    })
 
 }
 
@@ -42,3 +83,4 @@ exports.getOrders = async(usuario_id) => {
     return pedidos
 
 }
+

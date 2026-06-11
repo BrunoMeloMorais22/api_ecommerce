@@ -7,7 +7,7 @@ exports.createProduct = async(req, res, next) => {
 
     try{
 
-        const { nome, preco } = req.body
+        const { nome, preco, estoque } = req.body
 
         const result = await productService.createProduct(
             nome,
@@ -59,7 +59,8 @@ exports.updateProduct = async(req, res, next) => {
         const result = await productService.updateProduct(
             Number(req.params.id),
             nome,
-            preco
+            preco,
+            estoque
         )
 
         logger.info('Produto atualizado com sucesso')

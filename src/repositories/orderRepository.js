@@ -40,3 +40,25 @@ exports.getOrders = async (usuarioId) => {
         }
     })
 }
+
+exports.createItemPedido = async (pedidoId, produtoId, quantidade, precoUnitario) => {
+    return await prisma.pedidoItem.create({
+        data: {
+            pedidoId,
+            produtoId,
+            quantidade,
+            precoUnitario
+        }
+    })
+}
+
+exports.updateEstoque = async (produtoId, novoEstoque) => {
+    return await prisma.produto.update({
+        where: {
+            id: produtoId
+        },
+        data: {
+            estoque: novoEstoque
+        }
+    })
+}

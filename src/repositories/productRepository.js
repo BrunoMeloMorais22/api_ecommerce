@@ -17,7 +17,8 @@ exports.updateProduct = async (id, nome, preco, estoque) => {
         where: { id },
         data: {
             nome,
-            preco
+            preco,
+            estoque
         }
     })
 }
