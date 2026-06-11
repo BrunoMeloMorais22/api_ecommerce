@@ -12,7 +12,7 @@ exports.getProducts = async () => {
     return await prisma.produto.findMany()
 }
 
-exports.updateProduct = async (id, nome, preco) => {
+exports.updateProduct = async (id, nome, preco, estoque) => {
     return await prisma.produto.update({
         where: { id },
         data: {

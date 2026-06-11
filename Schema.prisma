@@ -19,6 +19,8 @@ model Pedido {
     total Float
 
     usuario Usuario @relation(fields: [usuarioId],references: [id])
+
+    itens PedidoItem[]
 }
 
 model Produto {
@@ -26,8 +28,10 @@ model Produto {
 
     nome String
     preco Float
+    estoque Int @default(0)
 
     carrinhos Carrinho[]
+    itensPedido PedidoItem[]
 }
 
 model Carrinho {
@@ -42,6 +46,19 @@ model Carrinho {
     produto Produto @relation(fields: [produtoId], references: [id])
 }
 
+model PedidoItem {
+    id Int @id @default(autoincrement())
+
+    pedidoId Int 
+    produtoId Int
+
+    quantidade Int
+    precoUnitario Float
+
+    pedido Pedido @relation(fields: [pedidoId], references: [id])
+    produto Produto @relation(fields: [produtoId], references: [id])
+}
+
 enum Role {
     User
     Admin
@@ -49,7 +66,8 @@ enum Role {
 
 
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
 }
 
 datasource db {

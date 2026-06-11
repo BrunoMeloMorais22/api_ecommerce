@@ -11,7 +11,8 @@ exports.createProduct = async(req, res, next) => {
 
         const result = await productService.createProduct(
             nome,
-            preco
+            preco,
+            estoque
         )
 
         logger.info('Produto cadastrado com sucesso')
@@ -53,7 +54,7 @@ exports.updateProduct = async(req, res, next) => {
 
         const { id } = Number(req.params.id)
 
-        const { nome, preco } = req.body
+        const { nome, preco, estoque } = req.body
 
         const result = await productService.updateProduct(
             Number(req.params.id),

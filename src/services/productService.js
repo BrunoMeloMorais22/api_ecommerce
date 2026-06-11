@@ -4,7 +4,7 @@ const productRepository = require('../repositories/productRepository')
 const AppError = require('../utils/AppError')
 const logger = require('../config/logger')
 
-exports.createProduct = async(nome, preco) => {
+exports.createProduct = async(nome, preco, estoque) => {
 
     logger.info("Tentativa de cadastro de produto iniciado")
 
@@ -38,6 +38,8 @@ exports.getProducts = async() => {
 
     const produtos = await productRepository.getProducts()
 
+    console.log('Salvando produtos no Redis')
+    
     await redisClient.set(
         'produtos',
         JSON.stringify(produtos),
@@ -51,7 +53,7 @@ exports.getProducts = async() => {
 
 }
 
-exports.updateProduct = async (id, nome, preco) => {
+exports.updateProduct = async (id, nome, preco, estoque) => {
 
     if(!nome || !preco){
         throw new AppError(
