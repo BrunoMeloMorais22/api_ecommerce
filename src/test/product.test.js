@@ -29,3 +29,4 @@ test('Buscar produtos cadastrados', async() => {
     
     expect(produtosResponse.status).toBe(200)
 })
+

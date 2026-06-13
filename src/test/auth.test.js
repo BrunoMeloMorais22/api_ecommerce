@@ -9,15 +9,25 @@ test("Deve responder com status 200", async () => {
     expect(response.status).toBe(200)
 })
 
-test('Deve cadastrar usuário', async() => {
-    const registerResponse = await request(app)
-        .post('/routes/register')
+
+test('Deve adicionar o produto ao carrinho', async() => {
+    const loginResponse = await request(app)
+        .post('/routes/login')
         .send({
-            nome: 'Matheus Oliveira',
-            email: 'matheus@gmail.com',
-            senha: 'Matheus@2245',
+            email: "matheus@gmail.com",
+            senha: "Matheus@2245"
         })
-    expect(registerResponse.status).toBe(201)
+    
+    const tokenUser = loginResponse.body.data.token
+    console.log(loginResponse.body)
+    
+    const carrinhoResponse = await request(app)
+        .post('/routes/carrinho')
+        .set('Authorization', `Bearer ${tokenUser}`)
+        .send({
+            produtoId: 1,
+            quantidade: 5
+        })
+    
+    expect(carrinhoResponse.status).toBe(200)
 })
-
-
