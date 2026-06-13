@@ -7,6 +7,24 @@ exports.addToCart = async (
     produtoId,
     quantidade
 ) => {
+    const itemExistente = await prisma.carrinho.findFirst({
+        where:{
+            usuarioId,
+            produtoId
+        }
+    })
+
+    if(itemExistente){
+        return await prisma.carrinho.update({
+            where: {
+                id: itemExistente.id
+            },
+            data:{
+                quantidade:
+                    itemExistente.quantidade + quantidade
+            }
+        })
+    }
 
     return await prisma.carrinho.create({
         data: {
@@ -15,7 +33,6 @@ exports.addToCart = async (
             quantidade
         }
     })
-
 }
 
 exports.getCart = async (usuarioId) => {

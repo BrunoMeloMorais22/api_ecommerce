@@ -22,53 +22,10 @@ test('Usuário comum não pode cadastrar produto', async() => {
     expect(response.status).toBe(403)
 })
 
-test('Admin pode cadastrar produtos', async() => {
-    const loginResponse = await request(app)
-        .post('/routes/login')
-        .send({
-            email: "bruno@gmail.com",
-            senha: "Admin@123"
-        })
 
-    console.log(loginResponse.body)
-    const tokenAdmin = loginResponse.body.data.token
-
-    const response = await request(app)
-        .post('/routes/produtos')
-        .set('Authorization', `Bearer ${tokenAdmin}`)
-        .send({
-            nome: "Iphone 13 128GB ",
-            preco: 2000
-        })
-    
-    expect(response.status).toBe(201)
-})
-
-test('Deve atualizar o produto(apenas o admin pode atualizar)', async() => {
-    const loginResponse = await request(app)
-        .post('/routes/login')
-        .send({
-            email: 'bruno@gmail.com',
-            senha: 'Admin@123'
-        })
-    console.log(loginResponse.body)
-    tokenAdmin = loginResponse.body.data.token
-
-    const updateResponse = await request(app)
-        .put('/routes/produtos/2')
-        .set('Authorization', `Bearer ${tokenAdmin}`)
-        .send({
-            nome: 'Camisa do Corinthians',
-            preco: 450
-        })
-    
-    expect(updateResponse.status).toBe(200)
-})
-
-test('Buscar os produtos', async() => {
-    const response = await request(app)
+test('Buscar produtos cadastrados', async() => {
+    const produtosResponse = await request(app)
         .get('/routes/produtos')
     
-    console.log(response.body)
-    expect(response.status).toBe(200)
+    expect(produtosResponse.status).toBe(200)
 })

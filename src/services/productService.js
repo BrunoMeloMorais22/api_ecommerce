@@ -27,7 +27,7 @@ exports.createProduct = async(nome, preco, estoque) => {
 }
 
 exports.getProducts = async() => {
-
+    logger.info('Busca pelos produtos iniciado')
     const cache = await redisClient.get('produtos')
 
     if(cache){
