@@ -12,10 +12,10 @@ exports.createOrder = async(usuario_id) => {
         throw new AppError("Carrinho vazio", 400)
     }
 
-    await prisma.$transaction(async (tx) => {
+    return await prisma.$transaction(async (tx) => {
 
         for(const item of carrinho){
-            
+
             if(Number(item.produto.estoque) < Number(item.quantidade)){
                 throw new AppError(
                     `Estoque insuficiente para ${item.produto.nome}`,
@@ -72,6 +72,12 @@ exports.createOrder = async(usuario_id) => {
                 usuarioId: usuario_id
             }
         })
+
+        return {
+            mensagem: "Pedido criado",
+            pedido_id: pedido.id,
+            total
+        }
 
     })
 

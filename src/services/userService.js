@@ -90,7 +90,7 @@ exports.updateUsers = async (id, userLogado, roleLogado, data) => {
     }
 
     const isOwner = Number(id) === Number(userLogado)
-    const isAdmin = roleLogado === 'ADMIN'
+    const isAdmin = roleLogado === 'Admin'
 
     if (!isOwner && !isAdmin) {
         throw new AppError('Acesso negado', 403)
