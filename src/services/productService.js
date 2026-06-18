@@ -18,7 +18,6 @@ exports.createProduct = async(nome, preco, estoque) => {
         estoque
     })
 
-    logger.info("Produto cadastrado")
     return {
         mensagem: "Produto criado",
         id: produto.id

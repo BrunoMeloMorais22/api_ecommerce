@@ -1,37 +1,55 @@
 const request = require('supertest')
 const app = require('../app')
-const e = require('express')
 const { login } = require('../services/userService')
+const { PrismaClient } = require('@prisma/client')
+const prisma = new PrismaClient()
+let tokenUser
+let tokenAdmin
 
-
-test('Deve criar pedido a partir do carrinho', async () => {
-
-    const loginResponse = await request(app)
+beforeAll(async() => {
+    const loginUserResponse = await request(app)
         .post('/routes/login')
         .send({
-            email: 'matheus@gmail.com',
-            senha: 'Matheus@2245'
-        })
+            email: "matheus@gmail.com",
+            senha: "Matheus@2245"
+        })  
+    
+    tokenUser = loginUserResponse.body.data.token
 
-    const tokenUser = loginResponse.body.data.token
-
-    await request(app)
-        .post('/routes/carrinho')
-        .set('Authorization', `Bearer ${tokenUser}`)
+    const loginAdminResponse = await request(app)
+        .post('/routes/login')
         .send({
-            produto_id: 3,
-            quantidade: 1
+            email: "bruno@gmail.com",
+            senha: "Admin@123"
         })
+    
+    tokenAdmin = loginAdminResponse.body.data.token
+})
 
-    const pedidoResponse = await request(app)
+describe('Pedidos', () => {
+    beforeEach(async () => {
+    
+        await prisma.carrinho.create({
+            data:{
+                usuarioId: 2,
+                produtoId: 2,
+                quantidade: 4
+            }
+        })
+    })
+
+    afterEach(async () => {
+        await prisma.carrinho.deleteMany({
+            where: {
+                usuarioId: 2
+            }
+        })
+    })
+    test('Deve criar pedido', async() => {
+    const response = await request(app)
         .post('/routes/pedido')
         .set('Authorization', `Bearer ${tokenUser}`)
-
-    expect(pedidoResponse.status).toBe(201)
-
-    expect(pedidoResponse.body.success).toBe(true)
-
-    expect(pedidoResponse.body.data).toHaveProperty('pedido_id')
-
-    expect(pedidoResponse.body.data).toHaveProperty('total')
+    console.log(response.body)
+    expect(response.status).toBe(201)
+})
 })

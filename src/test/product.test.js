@@ -1,17 +1,34 @@
 const request = require('supertest')
 const app = require('../app')
-const e = require('express')
-const { login } = require('../services/userService')
+const { PrismaClient } = require('@prisma/client')
+const prisma = new PrismaClient()
 
-test('Usuário comum não pode cadastrar produto', async() => {
-    const loginResponse = await request(app)
+let tokenUser
+let tokenAdmin
+
+beforeAll(async () => {
+
+    const loginUserResponse = await request(app)
         .post('/routes/login')
         .send({
-            email: 'matheus@gmail.com',
-            senha: 'Matheus@2245'
+            email: 'guilherme@gmail.com',
+            senha: 'Guilherme@2245'
         })
-    
-    const tokenUser = loginResponse.body.data.token
+
+    tokenUser = loginUserResponse.body.data.token
+
+    const loginAdminResponse = await request(app)
+        .post('/routes/login')
+        .send({
+            email: 'bruno@gmail.com',
+            senha: 'Admin@123'
+        })
+
+    tokenAdmin = loginAdminResponse.body.data.token
+
+})
+
+test('Usuário comum não pode cadastrar produto', async() => {
     const response = await request(app)
         .post('/routes/produtos')
         .set('Authorization', `Bearer ${tokenUser}`)
@@ -19,48 +36,38 @@ test('Usuário comum não pode cadastrar produto', async() => {
             nome: "Notebook Gamer",
             preco: 3500
         })
+
     expect(response.status).toBe(403)
+
 })
 
-
-test('Admin pode cadastrar produtos', async () => {
-    const loginResponse = await request(app)
-        .post('/routes/login')
-        .send({
-            email: "bruno@gmail.com",
-            senha: "Admin@123"
-        })
-    const tokenUser = loginResponse.body.data.token
-    const produtoResponse = await request(app)
+test('Não pode cadastrar produto com preço negativo', async() => {
+    const response = await request(app)
         .post('/routes/produtos')
-        .set('Authorization', `Bearer ${tokenUser}`)
+        .set('Authorization', `Bearer ${tokenAdmin}`)
         .send({
-            nome: "Camisa do Corinthians All Black",
-            preco: 250,
-            estoque: 2
+            nome: "Televisão 4K 82'p",
+            preco: -5000,
+            estoque: 15
         })
-    
-    expect(produtoResponse.status).toBe(201)
+    console.log(response.body)
+    expect(response.status).toBe(400)
 })
 
-test('Deve adicionar o produto ao carrinho', async() => {
-    const loginResponse = await request(app)
-        .post('/routes/login')
-        .send({
-            email: "matheus@gmail.com",
-            senha: "Matheus@2245"
-        })
+test('Deve deletar um produto', async() => {
+    const response = await request(app)
+        .delete('/routes/produtos/3')
+        .set('Authorization', `Bearer ${tokenAdmin}`)
     
-    const tokenUser = loginResponse.body.data.token
-    console.log(loginResponse.body)
-    
-    const carrinhoResponse = await request(app)
-        .post('/routes/carrinho')
+    console.log(response.body)
+    expect(response.status).toBe(200)
+})
+
+test('Usuário comum não pode deletar um produto', async() => {
+    const response = await request(app)
+        .delete('/routes/produtos/3')
         .set('Authorization', `Bearer ${tokenUser}`)
-        .send({
-            produtoId: 1,
-            quantidade: 5
-        })
     
-    expect(carrinhoResponse.status).toBe(200)
+    console.log(response.body)
+    expect(response.status).toBe(403)
 })

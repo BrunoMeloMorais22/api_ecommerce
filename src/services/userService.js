@@ -82,7 +82,9 @@ exports.getUsers = async () => {
 }
 
 exports.updateUsers = async (id, userLogado, roleLogado, data) => {
-
+    console.log('id:', id)
+    console.log('userLogado:', userLogado)
+    console.log('roleLogado:', roleLogado)
     const user = await userRepository.findById(id)
 
     if (!user) {

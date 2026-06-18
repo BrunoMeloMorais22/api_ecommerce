@@ -25,6 +25,8 @@ exports.updateProduct = async (id, nome, preco, estoque) => {
 
 exports.deleteProduct = async (id) => {
     return await prisma.produto.delete({
-        where: { id }
+        where: {
+            id: Number(id)
+        } 
     })
 }

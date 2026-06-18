@@ -81,7 +81,7 @@ exports.deleteProduct = async(req, res, next) => {
 
     try {
 
-        const { id } = req.params
+        const id = Number(req.params.id)
 
         const result = await productService.deleteProduct(id)
 
