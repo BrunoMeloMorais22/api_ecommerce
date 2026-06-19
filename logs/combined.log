@@ -1093,3 +1093,321 @@
 {"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T13:05:48.324Z"}
 {"level":"warn","message":"Erro no login do usuário fabricio2@gmail.com","timestamp":"2026-06-18T13:05:48.326Z"}
 {"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-18T13:05:48.327Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:07:46.005Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-18T20:07:46.300Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-18T20:07:46.329Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente fabricio@gmail.com","timestamp":"2026-06-18T20:07:46.333Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-06-18T20:07:46.334Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:07:46.343Z"}
+{"level":"warn","message":"Erro no login do usuário fabricio2@gmail.com","timestamp":"2026-06-18T20:07:46.348Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-18T20:07:46.349Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:08:55.854Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-18T20:08:56.008Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:10:02.807Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-18T20:10:02.905Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:10:02.929Z"}
+{"level":"warn","message":"Erro no login do usuário fabricio2@gmail.com","timestamp":"2026-06-18T20:10:02.931Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-18T20:10:02.931Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:11:08.000Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-18T20:11:08.110Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:11:08.148Z"}
+{"level":"warn","message":"Erro no login do usuário fabricio2@gmail.com","timestamp":"2026-06-18T20:11:08.151Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-18T20:11:08.152Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:12:01.409Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-18T20:12:01.521Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:12:01.551Z"}
+{"level":"warn","message":"Erro no login do usuário fabricio2@gmail.com","timestamp":"2026-06-18T20:12:01.553Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-18T20:12:01.554Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:13:02.536Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-18T20:13:02.658Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:13:02.705Z"}
+{"level":"warn","message":"Erro no login do usuário fabricio2@gmail.com","timestamp":"2026-06-18T20:13:02.707Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-18T20:13:02.710Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-18T20:13:02.743Z"}
+{"level":"error","message":"Erro ao atualizar usuário","timestamp":"2026-06-18T20:13:02.785Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-06-18T20:13:17.975Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-06-18T20:13:18.415Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:13:19.843Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:13:20.006Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:13:20.013Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-18T20:13:20.180Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:13:20.203Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-18T20:13:20.231Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-18T20:13:20.240Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:13:20.262Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:13:20.275Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-18T20:13:20.336Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-18T20:13:20.403Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-06-18T20:13:20.423Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-06-18T20:13:20.449Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-06-18T20:13:20.458Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-18T20:13:20.472Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-18T20:13:20.518Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente guilherme@gmail.com","timestamp":"2026-06-18T20:13:20.532Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-06-18T20:13:20.539Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-18T20:13:20.570Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente Matheus@gmail.com","timestamp":"2026-06-18T20:13:20.588Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-06-18T20:13:20.590Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-18T20:13:20.637Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:13:21.004Z"}
+{"level":"info","message":"Usuário atualizado com sucesso","timestamp":"2026-06-18T20:13:21.491Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-18T20:13:21.609Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-18T20:13:21.705Z"}
+{"level":"warn","message":"Erro no login do usuário fabricio2@gmail.com","timestamp":"2026-06-18T20:13:21.709Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-18T20:13:21.713Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-18T20:13:21.743Z"}
+{"level":"error","message":"Erro ao atualizar usuário","timestamp":"2026-06-18T20:13:21.764Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T11:43:41.000Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T11:43:41.155Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T11:43:41.189Z"}
+{"level":"warn","message":"Erro no login do usuário fabricio2@gmail.com","timestamp":"2026-06-19T11:43:41.192Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-19T11:43:41.193Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-19T11:43:41.218Z"}
+{"level":"error","message":"Erro ao atualizar usuário","timestamp":"2026-06-19T11:43:41.248Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-19T11:43:41.262Z"}
+{"level":"info","message":"Usuário atualizado com sucesso","timestamp":"2026-06-19T11:43:41.314Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-06-19T11:44:14.872Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-06-19T11:44:14.921Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T11:44:16.129Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T11:44:16.135Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T11:44:16.138Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T11:44:16.288Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T11:44:16.288Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T11:44:16.289Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T11:44:16.308Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T11:44:16.309Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T11:44:16.312Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T11:44:16.409Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T11:44:16.417Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T11:44:16.418Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-19T11:44:16.455Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-06-19T11:44:16.450Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-06-19T11:44:16.462Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-06-19T11:44:16.467Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente guilherme@gmail.com","timestamp":"2026-06-19T11:44:16.466Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-06-19T11:44:16.472Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-19T11:44:16.490Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente Matheus@gmail.com","timestamp":"2026-06-19T11:44:16.493Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-06-19T11:44:16.494Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-19T11:44:16.527Z"}
+{"level":"info","message":"Usuário atualizado com sucesso","timestamp":"2026-06-19T11:44:16.553Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T11:44:16.800Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T11:44:16.937Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T11:44:16.974Z"}
+{"level":"warn","message":"Erro no login do usuário fabricio2@gmail.com","timestamp":"2026-06-19T11:44:16.977Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-19T11:44:16.979Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-19T11:44:16.998Z"}
+{"level":"error","message":"Erro ao atualizar usuário","timestamp":"2026-06-19T11:44:17.007Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-19T11:44:17.015Z"}
+{"level":"info","message":"Usuário atualizado com sucesso","timestamp":"2026-06-19T11:44:17.026Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:01:16.862Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:01:17.095Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:05:36.391Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:05:36.621Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:05:36.635Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-19T12:05:36.725Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:06:29.236Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:06:29.362Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:07:01.386Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:07:01.538Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:07:01.558Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-19T12:07:01.660Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:08:49.583Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:08:49.709Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:08:49.726Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-19T12:08:49.809Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:13:21.488Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:13:21.663Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:13:21.685Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-19T12:13:21.783Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:15:03.574Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:15:03.703Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:15:03.718Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:15:03.812Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:17:41.857Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:17:41.941Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:17:41.952Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:17:42.016Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:21:04.700Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:21:04.844Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:21:04.855Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:21:04.930Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:21:33.858Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:21:33.953Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:21:33.965Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:21:34.037Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:02.971Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:22:03.074Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:03.085Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:22:03.163Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:20.048Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:22:20.161Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:20.182Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:22:20.278Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-06-19T12:22:40.885Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-06-19T12:22:40.959Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:42.123Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:42.155Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:42.254Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:42.277Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:22:42.386Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:42.413Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:22:42.414Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:22:42.436Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:42.440Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:22:42.454Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:42.477Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:42.494Z"}
+{"level":"warn","message":"Erro no login do usuário fabricio2@gmail.com","timestamp":"2026-06-19T12:22:42.498Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-19T12:22:42.504Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-19T12:22:42.531Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:22:42.539Z"}
+{"level":"error","message":"Erro ao atualizar usuário","timestamp":"2026-06-19T12:22:42.549Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:22:42.566Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-19T12:22:42.571Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:22:42.587Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-19T12:22:42.593Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente guilherme@gmail.com","timestamp":"2026-06-19T12:22:42.607Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-06-19T12:22:42.616Z"}
+{"level":"info","message":"Usuário atualizado com sucesso","timestamp":"2026-06-19T12:22:42.625Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-19T12:22:42.642Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente Matheus@gmail.com","timestamp":"2026-06-19T12:22:42.647Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-06-19T12:22:42.641Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-06-19T12:22:42.649Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-06-19T12:22:42.651Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-06-19T12:22:42.656Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-19T12:22:42.691Z"}
+{"level":"info","message":"Usuário atualizado com sucesso","timestamp":"2026-06-19T12:22:42.739Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:43.042Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:22:43.219Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:22:43.237Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:22:43.342Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:38:34.289Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:38:34.479Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:38:34.490Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:38:34.564Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:38:48.607Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:38:48.729Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:38:48.746Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:38:48.837Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-06-19T12:38:48.850Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-06-19T12:38:48.850Z"}
+{"level":"info","message":"Produto cadastrado com sucesso","timestamp":"2026-06-19T12:38:48.883Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:42:28.933Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:42:29.025Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:42:29.035Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:42:29.103Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-06-19T12:42:29.132Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-06-19T12:42:29.133Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-06-19T12:42:29.133Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:43:40.339Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:43:40.429Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:43:40.441Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:43:40.508Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-06-19T12:43:40.535Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-06-19T12:43:40.536Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-06-19T12:43:40.537Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:43:40.607Z"}
+{"level":"error","message":"Erro ao atualizar produto","timestamp":"2026-06-19T12:43:40.607Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:43:40.614Z"}
+{"level":"error","message":"Erro ao atualizar produto","timestamp":"2026-06-19T12:43:40.615Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:44:53.918Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:44:54.020Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:44:54.032Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:44:54.116Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-06-19T12:44:54.146Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-06-19T12:44:54.147Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-06-19T12:44:54.148Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:44:54.212Z"}
+{"level":"error","message":"Erro ao atualizar produto","timestamp":"2026-06-19T12:44:54.213Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:44:54.227Z"}
+{"level":"error","message":"Erro ao atualizar produto","timestamp":"2026-06-19T12:44:54.227Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:46:38.487Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:46:38.590Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:46:38.607Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:46:38.693Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-06-19T12:46:38.724Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-06-19T12:46:38.725Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-06-19T12:46:38.726Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:46:38.806Z"}
+{"level":"info","message":"Produto atualizado com sucesso","timestamp":"2026-06-19T12:46:38.841Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:46:38.851Z"}
+{"level":"error","message":"Erro ao atualizar produto","timestamp":"2026-06-19T12:46:38.852Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:49:00.872Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:49:00.957Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:49:00.968Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:49:01.032Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-06-19T12:49:01.039Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-06-19T12:49:01.039Z"}
+{"level":"info","message":"Produto cadastrado com sucesso","timestamp":"2026-06-19T12:49:01.055Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-06-19T12:49:01.072Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-06-19T12:49:01.072Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-06-19T12:49:01.073Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:49:01.117Z"}
+{"level":"info","message":"Produto atualizado com sucesso","timestamp":"2026-06-19T12:49:01.124Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:49:01.131Z"}
+{"level":"error","message":"Erro ao atualizar produto","timestamp":"2026-06-19T12:49:01.132Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:50:38.054Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:50:38.156Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:50:38.167Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:50:38.243Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-06-19T12:50:38.264Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-06-19T12:50:38.265Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-06-19T12:50:38.266Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:50:38.336Z"}
+{"level":"info","message":"Produto atualizado com sucesso","timestamp":"2026-06-19T12:50:38.345Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:50:38.357Z"}
+{"level":"error","message":"Erro ao atualizar produto","timestamp":"2026-06-19T12:50:38.364Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:52:46.270Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:52:46.364Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:52:46.374Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:52:46.447Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-06-19T12:52:46.464Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-06-19T12:52:46.465Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-06-19T12:52:46.465Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:52:46.517Z"}
+{"level":"info","message":"Produto atualizado com sucesso","timestamp":"2026-06-19T12:52:46.525Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:52:46.535Z"}
+{"level":"error","message":"Erro ao atualizar produto","timestamp":"2026-06-19T12:52:46.539Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-06-19T12:53:44.233Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-06-19T12:53:44.293Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:53:45.634Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:53:45.699Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:53:45.860Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:53:45.952Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:53:46.010Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:53:46.032Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:53:46.034Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:53:46.058Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:53:46.090Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:53:46.118Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:53:46.150Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:53:46.176Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:53:46.221Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-19T12:53:46.240Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente guilherme@gmail.com","timestamp":"2026-06-19T12:53:46.258Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-06-19T12:53:46.264Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:53:46.296Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-19T12:53:46.302Z"}
+{"level":"warn","message":"Erro no login do usuário fabricio2@gmail.com","timestamp":"2026-06-19T12:53:46.308Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-06-19T12:53:46.362Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente Matheus@gmail.com","timestamp":"2026-06-19T12:53:46.384Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-06-19T12:53:46.389Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:53:46.426Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-19T12:53:46.440Z"}
+{"level":"error","message":"Erro ao atualizar usuário","timestamp":"2026-06-19T12:53:46.488Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-19T12:53:46.527Z"}
+{"level":"info","message":"Tentativa de alteração de usuário iniciada","timestamp":"2026-06-19T12:53:46.526Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:53:46.523Z"}
+{"level":"info","message":"Usuário atualizado com sucesso","timestamp":"2026-06-19T12:53:46.593Z"}
+{"level":"info","message":"Usuário atualizado com sucesso","timestamp":"2026-06-19T12:53:46.613Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:53:46.881Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-06-19T12:53:46.914Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-06-19T12:53:47.066Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-06-19T12:53:47.113Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-06-19T12:53:47.123Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-06-19T12:53:47.127Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:53:47.254Z"}
+{"level":"info","message":"Produto atualizado com sucesso","timestamp":"2026-06-19T12:53:47.273Z"}
+{"level":"info","message":"Tentaiva de alteração de produto iniciada","timestamp":"2026-06-19T12:53:47.291Z"}
+{"level":"error","message":"Erro ao atualizar produto","timestamp":"2026-06-19T12:53:47.307Z"}

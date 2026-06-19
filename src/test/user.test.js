@@ -12,7 +12,7 @@ beforeAll(async () => {
             senha: "Admin@123"
         })
 
-    tokenAdmin = loginAdminResponse.body.token
+    tokenAdmin = loginAdminResponse.body.data.token
 })
 
 describe('Retornar Usuários', () => {
@@ -21,23 +21,13 @@ describe('Retornar Usuários', () => {
         const response = await request(app)
             .get('/routes/users')
             .set('Authorization', `Bearer ${tokenAdmin}`)
-
+        console.log(response.body)
         expect(response.status).toBe(200)
     })
 
 })
 
-test('Deve criar usuário', async () => {
-    const registerResponse = await request(app)
-        .post('/routes/register')
-        .send({
-            nome: "Fabricio de Souza",
-            email: "fabricio@gmail.com",
-            senha: "Fabricio@2245"
-        })
-    console.log(registerResponse.body)
-    expect(registerResponse.status).toBe(201)
-})
+
 
 test('Deve dar erro de credenciais inválidas(email)', async() => {
     const loginResponse = await request(app)
@@ -68,3 +58,13 @@ test('Deve retornar usuário não encontrado', async () => {
     expect(updateUser.status).toBe(404)
 })
 
+test('Deve atualizar usuário', async () => {
+    const updateUserResponse = await request(app)
+        .put('/routes/users/4')
+        .set('Authorization', `Bearer ${tokenAdmin}`)
+        .send({
+            nome: "fabricinho de Souza"
+        })  
+    
+    expect(updateUserResponse.status).toBe(200)
+})

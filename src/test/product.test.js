@@ -28,13 +28,16 @@ beforeAll(async () => {
 
 })
 
+
+
 test('Usuário comum não pode cadastrar produto', async() => {
     const response = await request(app)
         .post('/routes/produtos')
         .set('Authorization', `Bearer ${tokenUser}`)
         .send({
             nome: "Notebook Gamer",
-            preco: 3500
+            preco: 3500,
+            estoque: 12
         })
 
     expect(response.status).toBe(403)
@@ -54,9 +57,9 @@ test('Não pode cadastrar produto com preço negativo', async() => {
     expect(response.status).toBe(400)
 })
 
-test('Deve deletar um produto', async() => {
+test('Deve deletar um produto (produto não encontrado)', async() => {
     const response = await request(app)
-        .delete('/routes/produtos/3')
+        .delete('/routes/produtos/8')
         .set('Authorization', `Bearer ${tokenAdmin}`)
     
     console.log(response.body)
@@ -70,4 +73,39 @@ test('Usuário comum não pode deletar um produto', async() => {
     
     console.log(response.body)
     expect(response.status).toBe(403)
+})
+
+test('Deve atualizar produto', async () => {
+    const updateProduto = await request(app)
+        .put('/routes/produtos/4')
+        .set('Authorization', `Bearer ${tokenAdmin}`)
+        .send({
+            nome: "Televisão 82'",
+            preco: 2500,
+            estoque: 5
+        })
+    
+    console.log(updateProduto.body)
+    expect(updateProduto.status).toBe(200)
+})
+
+test('Deve atualizar produto (produto não encontrado)', async () => {
+    const updateProdutoResponse = await request(app)
+        .put('/routes/produtos/7')
+        .set('Authorization', `Bearer ${tokenAdmin}`)
+        .send({
+            nome: "Televisão",
+            preco: 2500,
+            estoque: 5
+        })
+    console.log(updateProduto.body)
+    expect(updateProdutoResponse.status).toBe(404)
+})
+
+test('Deve deletar produto', async () => {
+    const deleteResponse = await request(app)
+        .delete('/routes/produtos/5')
+        .set('Authorization', `Bearer ${tokenAdmin}`)
+    
+    expect(deleteResponse.status).toBe(200)
 })
