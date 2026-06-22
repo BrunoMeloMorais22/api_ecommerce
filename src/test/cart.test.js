@@ -52,3 +52,29 @@ test('Pegar itens do carrinho', async () => {
     console.log(pegarItens.body)
     expect(pegarItens.status).toBe(200)
 })
+
+test('Deve adicionar produtos ao carrinho', async () => {
+    const response = await request(app)
+        .post('/routes/carrinho')
+        .set('Authorization', `Bearer ${tokenUser}`)
+        .send({
+            produto_id: 4,
+            quantidade: 1
+        })
+    
+    console.log(response.body)
+    expect(response.status).toBe(200)
+})
+
+test('Quantidade não pode ser negativa', async() => {
+    const response = await request(app)
+        .post('/routes/carrinho')
+        .set('Authorization', `Bearer ${tokenUser}`)
+        .send({
+            produto_id: 3,
+            quantidade: -2
+        })
+    
+    expect(response.status).toBe(400)
+})
+

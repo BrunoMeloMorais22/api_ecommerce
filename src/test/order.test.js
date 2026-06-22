@@ -33,7 +33,7 @@ describe('Pedidos', () => {
             data:{
                 usuarioId: 2,
                 produtoId: 2,
-                quantidade: 4
+                quantidade: 1
             }
         })
     })

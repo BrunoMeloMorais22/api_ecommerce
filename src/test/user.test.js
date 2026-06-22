@@ -3,6 +3,7 @@ const app = require('../app')
 const { Prisma } = require('@prisma/client')
 
 let tokenAdmin
+let tokenUser
 
 beforeAll(async () => {
     const loginAdminResponse = await request(app)
@@ -13,6 +14,15 @@ beforeAll(async () => {
         })
 
     tokenAdmin = loginAdminResponse.body.data.token
+
+    const loginUserResponse = await request(app)
+        .post('/routes/login')
+        .send({
+            email: 'fabricio@gmail.com',
+            senha: "Fabricio@2245"
+        })
+    
+    tokenUser = loginUserResponse.body.data.token
 })
 
 describe('Retornar Usuários', () => {
@@ -67,4 +77,14 @@ test('Deve atualizar usuário', async () => {
         })  
     
     expect(updateUserResponse.status).toBe(200)
+})
+
+test('Acesso negado pra atualizar', async () => {
+    const responseUpdate = await request(app)
+        .put('/routes/users/4')
+        .set('Authorization', `Bearer ${tokenUser}`)
+        .send({
+            nome: "Facricião Souza",
+            email: "fabricio@gmail.com"
+        })
 })

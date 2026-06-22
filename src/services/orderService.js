@@ -1,7 +1,6 @@
 const orderRepository = require('../repositories/orderRepository')
 const AppError = require('../utils/AppError')
 const { PrismaClient } = require('@prisma/client')
-
 const prisma = new PrismaClient()
 
 exports.createOrder = async(usuario_id) => {
