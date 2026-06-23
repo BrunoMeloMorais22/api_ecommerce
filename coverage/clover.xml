@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1782137100107" clover="3.2.0">
-  <project timestamp="1782137100107" name="All files">
-    <metrics statements="354" coveredstatements="304" conditionals="55" coveredconditionals="39" methods="52" coveredmethods="40" elements="461" coveredelements="383" complexity="0" loc="354" ncloc="354" packages="9" files="25" classes="25"/>
+<coverage generated="1782152131706" clover="3.2.0">
+  <project timestamp="1782152131706" name="All files">
+    <metrics statements="354" coveredstatements="296" conditionals="55" coveredconditionals="40" methods="52" coveredmethods="40" elements="461" coveredelements="376" complexity="0" loc="354" ncloc="354" packages="9" files="25" classes="25"/>
     <package name="src">
       <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="app.js" path="C:\Users\grume\OneDrive\Área de Trabalho\api_ecommerce\api_ecommerce\src\app.js">
@@ -26,7 +26,7 @@
       </file>
     </package>
     <package name="src.config">
-      <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="logger.js" path="C:\Users\grume\OneDrive\Área de Trabalho\api_ecommerce\api_ecommerce\src\config\logger.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="6" type="stmt"/>
@@ -34,17 +34,17 @@
         <line num="25" count="6" type="stmt"/>
       </file>
       <file name="redis.js" path="C:\Users\grume\OneDrive\Área de Trabalho\api_ecommerce\api_ecommerce\src\config\redis.js">
-        <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="6" type="stmt"/>
         <line num="3" count="6" type="stmt"/>
         <line num="7" count="6" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
         <line num="11" count="6" type="stmt"/>
         <line num="13" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="101" coveredstatements="83" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="10"/>
+      <metrics statements="101" coveredstatements="82" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="10"/>
       <file name="cartController.js" path="C:\Users\grume\OneDrive\Área de Trabalho\api_ecommerce\api_ecommerce\src\controllers\cartController.js">
         <metrics statements="16" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="5" type="stmt"/>
@@ -65,14 +65,14 @@
         <line num="46" count="0" type="stmt"/>
       </file>
       <file name="orderController.js" path="C:\Users\grume\OneDrive\Área de Trabalho\api_ecommerce\api_ecommerce\src\controllers\orderController.js">
-        <metrics statements="13" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="5" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
         <line num="24" count="5" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
@@ -187,9 +187,9 @@
         <metrics statements="5" coveredstatements="4" conditionals="6" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="1" count="5" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
-        <line num="5" count="10" type="cond" truecount="1" falsecount="1"/>
+        <line num="5" count="11" type="cond" truecount="1" falsecount="1"/>
         <line num="7" count="0" type="stmt"/>
-        <line num="14" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="11" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="rateLimiter.js" path="C:\Users\grume\OneDrive\Área de Trabalho\api_ecommerce\api_ecommerce\src\middlewares\rateLimiter.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -313,7 +313,7 @@
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="111" coveredstatements="92" conditionals="43" coveredconditionals="31" methods="15" coveredmethods="14"/>
+      <metrics statements="111" coveredstatements="84" conditionals="43" coveredconditionals="32" methods="15" coveredmethods="13"/>
       <file name="cartService.js" path="C:\Users\grume\OneDrive\Área de Trabalho\api_ecommerce\api_ecommerce\src\services\cartService.js">
         <metrics statements="10" coveredstatements="8" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="1"/>
         <line num="1" count="5" type="stmt"/>
@@ -328,28 +328,28 @@
         <line num="26" count="0" type="stmt"/>
       </file>
       <file name="orderService.js" path="C:\Users\grume\OneDrive\Área de Trabalho\api_ecommerce\api_ecommerce\src\services\orderService.js">
-        <metrics statements="24" coveredstatements="23" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="4"/>
+        <metrics statements="24" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="3"/>
         <line num="1" count="5" type="stmt"/>
         <line num="2" count="5" type="stmt"/>
         <line num="3" count="5" type="stmt"/>
         <line num="4" count="5" type="stmt"/>
         <line num="6" count="5" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
-        <line num="10" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="18" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="54" count="1" type="stmt"/>
-        <line num="56" count="1" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
-        <line num="75" count="1" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
         <line num="85" count="5" type="stmt"/>
         <line num="87" count="1" type="stmt"/>
         <line num="89" count="1" type="stmt"/>
@@ -442,9 +442,9 @@
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="AppError.js" path="C:\Users\grume\OneDrive\Área de Trabalho\api_ecommerce\api_ecommerce\src\utils\AppError.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="7" type="stmt"/>
-        <line num="6" count="7" type="stmt"/>
-        <line num="7" count="7" type="stmt"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
         <line num="11" count="6" type="stmt"/>
       </file>
     </package>
