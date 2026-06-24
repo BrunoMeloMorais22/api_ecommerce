@@ -18,8 +18,8 @@ beforeAll(async () => {
     const loginUserResponse = await request(app)
         .post('/routes/login')
         .send({
-            email: 'fabricio@gmail.com',
-            senha: "Fabricio@2245"
+            email: 'matheus@gmail.com',
+            senha: "Matheus@2245"
         })
     
     tokenUser = loginUserResponse.body.data.token
@@ -36,8 +36,6 @@ describe('Retornar Usuários', () => {
     })
 
 })
-
-
 
 test('Deve dar erro de credenciais inválidas(email)', async() => {
     const loginResponse = await request(app)
@@ -73,7 +71,7 @@ test('Deve atualizar usuário', async () => {
         .put('/routes/users/4')
         .set('Authorization', `Bearer ${tokenAdmin}`)
         .send({
-            nome: "fabricinho de Souza"
+            nome: "Ingrid dos Santos"
         })  
     
     expect(updateUserResponse.status).toBe(200)
@@ -88,3 +86,27 @@ test('Acesso negado pra atualizar', async () => {
             email: "fabricio@gmail.com"
         })
 })
+
+test('Criar usuário', async() => {
+    const registerResponse = await request(app)
+        .post('/routes/register')
+        .send({
+            nome: "Ingrid Santos",
+            email: "ingrid@gmail.com",
+            senha: "Ingrid@2245"
+        })
+
+    expect(registerResponse.status).toBe(201)
+})
+
+test('Não achou usuário email', async() => {
+    const loginResponse = await request(app)
+        .post('/routes/login')
+        .send({
+            email: "ingrid2@gmail.com",
+            senha: "Ingrid@2245"
+        })
+    console.log(loginResponse.body)
+    expect(loginResponse.status).toBe(429)
+})
+

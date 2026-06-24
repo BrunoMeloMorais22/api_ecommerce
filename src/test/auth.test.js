@@ -3,8 +3,8 @@ const request = require('supertest')
 const app = require('../app')
 const { Prisma } = require('@prisma/client')
 
-let tokenUser
 let tokenAdmin
+let tokenUser
 
 beforeAll(async () => {
     const loginUserResponse = await request(app)
@@ -30,18 +30,6 @@ test("Deve responder com status 200", async () => {
     const response = await request(app).get('/')
 
     expect(response.status).toBe(200)
-})
-
-test('Deve criar usuário', async() => {
-    const registerResponse = await request(app)
-        .post('/routes/register')
-        .send({
-            nome: "Guilherme Santos",
-            email: "guilherme@gmail.com",
-            senha: "Guilherme@2245"
-        })
-    
-    expect(registerResponse.status).toBe(201)
 })
 
 test('Deve retornar usuário já existente', async() => {
@@ -74,7 +62,7 @@ test('Credenciais erradas', async() => {
             email: "matheus@gmail.com",
             senha: "sdnisindis"
         })
-
+    console.log(loginResponse.body)
     expect(loginResponse.status).toBe(429)
 })
 
@@ -88,4 +76,16 @@ test('Deve atualizar usuário', async() => {
         })
     
     expect(updateResponse.status).toBe(200)
+})
+
+test('Deve atualizar usuário(usuário não encontrado)', async() => {
+    const updateResponse = await request(app)
+        .put('/routes/users/4')
+        .set('Authorization', `Bearer ${tokenAdmin}`)
+        .send({
+            nome: "Guilherminho Silva",
+            email: "guilherme@gmail.com"
+        })
+    
+    expect(updateResponse.status).toBe(404)
 })

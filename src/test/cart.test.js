@@ -58,8 +58,8 @@ test('Deve adicionar produtos ao carrinho', async () => {
         .post('/routes/carrinho')
         .set('Authorization', `Bearer ${tokenUser}`)
         .send({
-            produto_id: 4,
-            quantidade: 1
+            produto_id: 1,
+            quantidade: 5
         })
     
     console.log(response.body)

@@ -33,7 +33,7 @@ describe('Pedidos', () => {
             data:{
                 usuarioId: 2,
                 produtoId: 2,
-                quantidade: 1
+                quantidade: 2
             }
         })
     })
@@ -52,4 +52,15 @@ describe('Pedidos', () => {
     console.log(response.body)
     expect(response.status).toBe(201)
 })
+})
+
+test('Pegar pedidos', async() => {
+    const pegarOrders = await request(app)
+        .get('/routes/pedidos')
+        .set('Authorization', `Bearer ${tokenUser}`)
+        .send({
+            usuarioId: 2
+        })
+    console.log(pegarOrders.body)
+    expect(pegarOrders.status).toBe(200)
 })
