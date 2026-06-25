@@ -109,3 +109,19 @@ exports.updateUsers = async (id, userLogado, roleLogado, data) => {
 
     return await userRepository.update(id, updateData)
 }
+
+exports.deleteUser = async(id) => {
+    const result = await userRepository.deleteUser(id)
+
+    if(result.affectedRows === 0){
+        throw new AppError(
+            "Usuário não encontrado",
+            404
+        )
+    }
+
+    return {
+        message: "Usuário excluido com sucesso",
+        usuarioId: id
+    }
+}

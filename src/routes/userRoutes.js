@@ -89,4 +89,6 @@ router.get('/users', authMiddleware, authorize('Admin'), userController.getUsers
 
 router.put('/users/:id', authMiddleware, authorize('Admin'), userController.updateUsers)
 
+router.delete('/users/:id', authMiddleware, authorize('Admin'), userController.deleteUser)
+
 module.exports = router

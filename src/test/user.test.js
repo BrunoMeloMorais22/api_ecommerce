@@ -68,7 +68,7 @@ test('Deve retornar usuário não encontrado', async () => {
 
 test('Deve atualizar usuário', async () => {
     const updateUserResponse = await request(app)
-        .put('/routes/users/4')
+        .put('/routes/users/6')
         .set('Authorization', `Bearer ${tokenAdmin}`)
         .send({
             nome: "Ingrid dos Santos"
@@ -87,17 +87,6 @@ test('Acesso negado pra atualizar', async () => {
         })
 })
 
-test('Criar usuário', async() => {
-    const registerResponse = await request(app)
-        .post('/routes/register')
-        .send({
-            nome: "Ingrid Santos",
-            email: "ingrid@gmail.com",
-            senha: "Ingrid@2245"
-        })
-
-    expect(registerResponse.status).toBe(201)
-})
 
 test('Não achou usuário email', async() => {
     const loginResponse = await request(app)
@@ -108,5 +97,13 @@ test('Não achou usuário email', async() => {
         })
     console.log(loginResponse.body)
     expect(loginResponse.status).toBe(429)
+})
+
+test('Deve deletar usuário', async() => {
+    const deletarResponse = await request(app)
+        .delete('/routes/users/6')
+        .set('Authorization', `Bearer ${tokenAdmin}`)
+    
+    expect(deletarResponse.status).toBe(200)
 })
 

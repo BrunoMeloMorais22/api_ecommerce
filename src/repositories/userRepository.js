@@ -32,3 +32,11 @@ exports.update = async(id, data) => {
         data
     })
 }
+
+exports.deleteUser = async(id) => {
+    return await prisma.usuario.delete({
+        where: {
+            id: Number(id)
+        } 
+    })
+}

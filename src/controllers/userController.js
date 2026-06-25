@@ -104,3 +104,18 @@ exports.updateUsers = async (req, res, next) => {
         next(error)
     }
 }
+
+exports.deleteUser = async (req, res, next) => {
+    try{
+        const id = Number(req.params.id)
+
+        const result = await userService.deleteUser(id)
+
+        return res.status(200).json({
+            success: true,
+            data: result
+        })
+    } catch(error){
+        next(error)
+    }
+}
