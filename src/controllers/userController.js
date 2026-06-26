@@ -4,6 +4,7 @@ const userService = require('../services/userService')
 const { registerSchema } = require('../validators/userValidators')
 const { loginSchema } = require('../validators/userValidators')
 const logger = require('../config/logger')
+const { success } = require('zod')
 
 exports.register = async(req, res, next) => {
 
@@ -105,7 +106,7 @@ exports.updateUsers = async (req, res, next) => {
     }
 }
 
-exports.deleteUser = async (req, res, next) => {
+exports.deleteUser = async(req, res, next) => {
     try{
         const id = Number(req.params.id)
 
@@ -115,7 +116,7 @@ exports.deleteUser = async (req, res, next) => {
             success: true,
             data: result
         })
-    } catch(error){
+    } catch (error){
         next(error)
     }
 }

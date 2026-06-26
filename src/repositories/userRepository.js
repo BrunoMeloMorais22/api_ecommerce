@@ -37,6 +37,6 @@ exports.deleteUser = async(id) => {
     return await prisma.usuario.delete({
         where: {
             id: Number(id)
-        } 
+        }
     })
 }

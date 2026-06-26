@@ -44,6 +44,8 @@ test('Deve dar erro de credenciais inválidas(email)', async() => {
             email: "fabricio2@gmail.com",
             senha: "Fabricio@2245"
         })
+    
+    expect(loginResponse.status).toBe(429)
 })
 
 test('Deve dar erro de credenciais inválidas(senha)', async() => {
@@ -53,6 +55,8 @@ test('Deve dar erro de credenciais inválidas(senha)', async() => {
             email: "fabricio@gmail.com",
             senha: "Fabricio@22454"
         })
+
+    expect(loginResponse.status).toBe(429)
 })
 
 test('Deve retornar usuário não encontrado', async () => {
@@ -68,10 +72,10 @@ test('Deve retornar usuário não encontrado', async () => {
 
 test('Deve atualizar usuário', async () => {
     const updateUserResponse = await request(app)
-        .put('/routes/users/6')
+        .put('/routes/users/2')
         .set('Authorization', `Bearer ${tokenAdmin}`)
         .send({
-            nome: "Ingrid dos Santos"
+            nome: "Matheuzinho Morango"
         })  
     
     expect(updateUserResponse.status).toBe(200)
@@ -85,6 +89,8 @@ test('Acesso negado pra atualizar', async () => {
             nome: "Facricião Souza",
             email: "fabricio@gmail.com"
         })
+    
+    expect(responseUpdate.status).toBe(403)
 })
 
 
@@ -101,9 +107,16 @@ test('Não achou usuário email', async() => {
 
 test('Deve deletar usuário', async() => {
     const deletarResponse = await request(app)
-        .delete('/routes/users/6')
+        .delete('/routes/users/11')
         .set('Authorization', `Bearer ${tokenAdmin}`)
     
     expect(deletarResponse.status).toBe(200)
 })
 
+test('Deve deletar usuário (usuário não encontrado)', async () => {
+    const deletarResponse = await request(app)
+        .delete('/routes/users/12')
+        .set('Authorization', `Bearer ${tokenAdmin}`)
+    
+    expect(deletarResponse.status).toBe(500)
+})

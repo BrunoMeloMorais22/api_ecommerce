@@ -111,6 +111,7 @@ exports.updateUsers = async (id, userLogado, roleLogado, data) => {
 }
 
 exports.deleteUser = async(id) => {
+    
     const result = await userRepository.deleteUser(id)
 
     if(result.affectedRows === 0){
@@ -121,7 +122,8 @@ exports.deleteUser = async(id) => {
     }
 
     return {
-        message: "Usuário excluido com sucesso",
+        messag: "Usuário removido com sucesso",
         usuarioId: id
     }
+
 }
