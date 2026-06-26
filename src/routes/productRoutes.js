@@ -7,7 +7,7 @@ const auth = require('../middlewares/auth')
 
 /**
  * @swagger
- * /produtos:
+ * /routes/produtos:
  *   post:
  *     summary: Criar um novo produto
  *     tags: [Produtos]

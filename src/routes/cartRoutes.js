@@ -5,7 +5,7 @@ const auth = require('../middlewares/auth')
 
 /**
  * @swagger
- * /carrinho:
+ * /routes/carrinho:
  *   post:
  *     summary: Adicionar produto ao carrinho
  *     tags: [Carrinho]
@@ -46,7 +46,7 @@ router.post("/carrinho", auth, cartController.addToCart)
 
 /**
  * @swagger
- * /carrinho:
+ * /routes/carrinho:
  *   get:
  *     summary: Listar itens do carrinho do usuário
  *     tags: [Carrinho]

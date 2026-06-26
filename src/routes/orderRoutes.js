@@ -5,7 +5,7 @@ const auth = require('../middlewares/auth')
 
 /**
  * @swagger
- * /pedido:
+ * /routes/pedido:
  *   post:
  *     summary: Criar um novo pedido
  *     tags: [Pedidos]
@@ -33,7 +33,7 @@ router.post("/pedido", auth, orderController.createOrder)
 
 /**
  * @swagger
- * /pedidos:
+ * /routes/pedidos:
  *   get:
  *     summary: Listar pedidos do usuário autenticado
  *     tags: [Pedidos]
