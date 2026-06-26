@@ -49,7 +49,7 @@ router.post("/produtos", auth, authorize('Admin'), productController.createProdu
 
 /**
  * @swagger
- * /produtos:
+ * /routes/produtos:
  *   get:
  *     summary: Listar todos os produtos
  *     tags: [Produtos]
