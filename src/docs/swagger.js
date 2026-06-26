@@ -1,30 +1,36 @@
-
-const swaggerJsdoc = require('swagger-jsdoc')
+const swaggerJsDoc = require('swagger-jsdoc')
 const swaggerUi = require('swagger-ui-express')
 
-const options = {
-    definition: {
-        openapi: '3.0.0',
-
-        info: {
-            title: 'API Ecommerce ',
-            version: '1.0.0',
-            description: 'Documentação da API' 
-        },
-
-        servers: [
-            {
-                url: 'http://localhost:3000'
-            }
-        ]
+const specs = swaggerJsDoc({
+  definition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'Minha API',
+      version: '1.0.0',
+      description: 'Documentação da API'
     },
 
-    apis: ['./src/routes/*.js']
-}
+    components: {
+      securitySchemes: {
+        bearerAuth: {
+          type: 'http',
+          scheme: 'bearer',
+          bearerFormat: 'JWT'
+        }
+      }
+    },
 
-const specs = swaggerJsdoc(options)
+    security: [
+      {
+        bearerAuth: []
+      }
+    ]
+  },
+
+  apis: ['./src/routes/*.js']
+})
 
 module.exports = {
-    swaggerUi,
-    specs
+  swaggerUi,
+  specs
 }

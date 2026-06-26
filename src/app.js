@@ -7,7 +7,11 @@ const cartRoutes = require('./routes/cartRoutes')
 const orderRoutes = require('./routes/orderRoutes')
 const errorHandler = require('./middlewares/errorHandler')
 
+const { swaggerUi, specs } = require('./docs/swagger')
+
 require('dotenv').config()
+
+app.use(express.json())
 
 app.get('/', (req, res) => {
     res.status(200).json({
@@ -15,8 +19,8 @@ app.get('/', (req, res) => {
     })
 })
 
-app.use(express.json())
 
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(specs))
 
 app.use("/routes", userRoutes)
 app.use("/routes", productRoutes)
