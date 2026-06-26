@@ -8,7 +8,7 @@ const authMiddleware = require('../middlewares/auth')
 console.log(userController)
 /**
  * @swagger
- * /login:
+ * /routes/login:
  *   post:
  *     summary: Realizar login do usuário
  *     tags: [Auth]
@@ -45,7 +45,7 @@ router.post("/login", limiter, userController.login)
 
 /**
  * @swagger
- * /register:
+ * /routes/register:
  *   post:
  *     summary: Cadastro de usuário
  *     tags: [Auth]
