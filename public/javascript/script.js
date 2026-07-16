@@ -1,6 +1,6 @@
 
 
-const API_URL = "http://localhost:3000"
+const API_URL = "https://api-ecommerce-online.onrender.com"
 
 const naoLogado = document.getElementById("naoLogado")
 const logado = document.getElementById("logado")

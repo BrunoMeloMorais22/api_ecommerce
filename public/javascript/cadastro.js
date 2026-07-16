@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:3000"
+const API_URL = "https://api-ecommerce-online.onrender.com"
 
 document.getElementById("formCadastro").addEventListener('submit', async function (e) {
     e.preventDefault()
