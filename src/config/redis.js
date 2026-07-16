@@ -1,19 +1,19 @@
-const { createClient } = require('redis');
+const { createClient } = require("redis");
 
 const redisClient = createClient({
-    url: 'redis://localhost:6379'
+    url: process.env.REDIS_URL
 });
 
-redisClient.on('error', (err) => {
-    console.error('Erro Redis:', err.message);
+redisClient.on("error", (err) => {
+    console.error("Erro Redis:", err.message);
 });
 
 (async () => {
     try {
         await redisClient.connect();
-        console.log('✅ Redis conectado');
+        console.log("✅ Redis conectado");
     } catch (error) {
-        console.log('⚠️ Redis não está rodando. A API continuará sem cache.');
+        console.log("⚠️ Não foi possível conectar ao Redis.");
     }
 })();
 
