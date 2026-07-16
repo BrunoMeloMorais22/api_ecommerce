@@ -25,8 +25,11 @@ CREATE TABLE "Pedido" (
 CREATE TABLE "Produto" (
     "id" SERIAL NOT NULL,
     "nome" TEXT NOT NULL,
-    "preco" DOUBLE PRECISION NOT NULL,
+    "preco" DECIMAL(10,2) NOT NULL,
     "estoque" INTEGER NOT NULL DEFAULT 0,
+    "descricao" TEXT NOT NULL,
+    "imagem" TEXT NOT NULL,
+    "categoria" TEXT NOT NULL,
 
     CONSTRAINT "Produto_pkey" PRIMARY KEY ("id")
 );

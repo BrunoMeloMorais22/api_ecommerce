@@ -2,18 +2,24 @@ const logger = require('../config/logger')
 const productService = require('../services/productService')
 
 exports.createProduct = async(req, res, next) => {
-
+    console.log("FILE: ", req.file)
+    console.log("BODY:", req.body)
     logger.info('Tentativa de cadastro de produto iniciada')
 
     try{
 
-        const { nome, preco, estoque } = req.body
+        const { nome, preco, estoque, descricao, categoria } = req.body
 
+        const imagem = req.file ? req.file.filename : null;
+        console.log(req.file);
         const result = await productService.createProduct(
             nome,
-            preco,
-            estoque
-        )
+            Number(preco),
+            Number(estoque),
+            descricao,
+            imagem,
+            categoria
+        );
 
         logger.info('Produto cadastrado com sucesso')
 
@@ -52,7 +58,7 @@ exports.updateProduct = async(req, res, next) => {
     
     try {
 
-        const { id } = Number(req.params.id)
+        const id  = Number(req.params.id)
 
         const { nome, preco, estoque } = req.body
 

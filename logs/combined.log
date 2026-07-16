@@ -2710,3 +2710,242 @@
 {"level":"info","message":"Usuário cadastrado com sucesso","timestamp":"2026-06-26T13:58:25.466Z"}
 {"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-06-26T14:07:26.547Z"}
 {"level":"info","message":"Usuário cadastrado com sucesso","timestamp":"2026-06-26T14:07:27.158Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-07-14T19:55:44.267Z"}
+{"level":"info","message":"Usuário cadastrado com sucesso","timestamp":"2026-07-14T19:55:44.783Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-07-14T19:55:45.991Z"}
+{"level":"warn","message":"Tentativa de cadastro com email já existente matheus@gmail.com","timestamp":"2026-07-14T19:55:46.033Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-07-14T19:55:46.034Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-14T19:58:18.912Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-07-14T19:58:19.023Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-14T20:01:40.970Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-07-14T20:01:41.376Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-07-14T20:03:42.117Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-07-14T20:03:42.123Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-07-14T20:03:49.259Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-07-14T20:03:49.260Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-07-14T20:03:49.724Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-07-14T20:03:49.725Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-07-14T20:04:02.201Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-07-14T20:04:02.201Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-07-14T20:04:11.565Z"}
+{"level":"info","message":"Usuário cadastrado com sucesso","timestamp":"2026-07-14T20:04:11.976Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-14T20:08:51.659Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-14T20:08:52.177Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-14T20:10:04.459Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-07-14T20:10:04.860Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-14T20:10:11.178Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-14T20:10:11.277Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-14T20:12:10.802Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-07-14T20:12:11.154Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-14T20:12:16.304Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-14T20:12:16.433Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-07-14T20:13:55.135Z"}
+{"level":"info","message":"Usuário cadastrado com sucesso","timestamp":"2026-07-14T20:13:55.626Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-14T20:14:58.267Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-07-14T20:14:58.598Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-14T20:15:00.244Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-07-14T20:15:00.342Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T12:46:22.101Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-07-15T12:46:23.093Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T12:46:32.825Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-07-15T12:46:32.916Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T12:50:04.011Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T12:50:04.340Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T12:52:05.803Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T12:52:06.248Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T12:52:25.607Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T12:52:25.740Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T12:54:53.406Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T12:54:53.714Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T13:14:12.824Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T13:14:14.009Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T13:21:28.570Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T13:21:30.983Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T13:23:07.316Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T13:23:07.641Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T13:24:49.921Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T13:24:50.240Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T13:25:16.279Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T13:25:16.382Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T13:26:44.107Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T13:26:44.438Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T13:26:46.007Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T13:28:17.160Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T13:33:17.741Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T13:33:21.335Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T13:34:38.213Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T13:34:38.492Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T13:34:40.075Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T13:35:03.418Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-07-15T13:35:03.418Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T13:35:03.451Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T13:37:45.919Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T13:37:46.249Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T13:37:47.813Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T13:38:16.494Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-07-15T13:38:16.494Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T13:38:16.523Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T13:38:57.988Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-07-15T13:38:57.988Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T13:38:58.013Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T13:44:45.399Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T13:44:46.808Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T13:44:48.372Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T13:45:19.242Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-07-15T13:45:19.243Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T13:45:19.286Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T13:46:13.908Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-07-15T13:46:13.908Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T13:46:13.932Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T13:47:00.168Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-07-15T13:47:00.169Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T13:47:00.190Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T13:50:48.531Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T13:50:48.899Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T13:50:50.471Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T13:51:18.568Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-07-15T13:51:18.569Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T13:51:18.664Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T13:53:13.133Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T13:53:13.450Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T13:53:15.000Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T13:53:39.792Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciado","timestamp":"2026-07-15T13:53:39.792Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T13:53:39.793Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T13:59:31.923Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T13:59:33.222Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T14:01:07.557Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T14:01:07.579Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T14:03:57.368Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T14:03:57.611Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T14:09:49.786Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T14:09:50.618Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T14:11:16.498Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T14:11:16.521Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-15T14:11:46.646Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-15T14:11:46.984Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T14:11:48.544Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T14:12:17.714Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T14:12:17.743Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T14:22:36.694Z"}
+{"level":"error","message":"Erro ao cadastrar produto","timestamp":"2026-07-15T14:22:37.492Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-15T14:25:29.853Z"}
+{"level":"info","message":"Produto cadastrado com sucesso","timestamp":"2026-07-15T14:25:30.143Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T14:25:31.731Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T14:26:32.849Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T14:26:41.819Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T14:26:42.298Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T14:27:16.155Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-15T18:40:33.402Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:53:47.726Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-16T13:54:33.853Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-16T13:54:34.195Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:54:35.776Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-16T13:55:25.499Z"}
+{"level":"info","message":"Produto cadastrado com sucesso","timestamp":"2026-07-16T13:55:25.586Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:55:27.163Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-16T13:55:55.776Z"}
+{"level":"info","message":"Produto cadastrado com sucesso","timestamp":"2026-07-16T13:55:55.814Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:55:57.396Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:56:31.923Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:56:50.839Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:57:26.950Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:57:28.007Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:58:02.286Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:58:08.994Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:58:09.485Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:58:21.047Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:58:21.279Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:58:21.457Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:58:31.784Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:58:47.114Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:58:48.032Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:58:48.327Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:58:55.903Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:58:56.081Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:58:56.252Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T13:59:14.630Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-16T14:01:08.650Z"}
+{"level":"info","message":"Produto cadastrado com sucesso","timestamp":"2026-07-16T14:01:08.718Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:01:10.286Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:03:01.609Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:03:02.344Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:28.639Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:29.153Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:29.575Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:29.725Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:29.933Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:30.127Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:30.321Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:30.523Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:30.738Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:31.054Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:31.222Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:31.386Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:47.501Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:04:47.951Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:07:07.039Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:07:07.198Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:09:02.701Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:09:03.071Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:11:36.276Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:11:36.444Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:14:59.050Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:14:59.247Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:14:59.428Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:14:59.589Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:14:59.731Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:14:59.932Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:15:49.718Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:17:30.096Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:17:34.286Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:27:59.437Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-16T14:28:14.422Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-16T14:28:14.738Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:28:16.296Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:28:17.918Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-07-16T14:28:42.960Z"}
+{"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-07-16T14:28:42.962Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-07-16T14:28:53.145Z"}
+{"level":"info","message":"Usuário cadastrado com sucesso","timestamp":"2026-07-16T14:28:53.293Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:28:54.864Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-16T14:30:52.588Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-16T14:30:52.683Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:30:54.232Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:32:00.710Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:32:09.554Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:44:02.710Z"}
+{"level":"info","message":"Tentativa de cadastro iniciada","timestamp":"2026-07-16T14:44:30.686Z"}
+{"level":"info","message":"Usuário cadastrado com sucesso","timestamp":"2026-07-16T14:44:31.044Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-16T14:51:03.493Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-16T14:51:04.417Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:51:05.984Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:51:08.859Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-16T14:51:24.048Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-07-16T14:51:24.153Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-16T14:53:42.950Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-16T14:53:43.593Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:53:45.176Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-16T14:55:56.240Z"}
+{"level":"info","message":"Produto cadastrado com sucesso","timestamp":"2026-07-16T14:55:56.335Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:55:57.902Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-16T14:56:45.551Z"}
+{"level":"info","message":"Produto cadastrado com sucesso","timestamp":"2026-07-16T14:56:45.600Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:56:47.168Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:56:50.633Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:56:52.087Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:56:52.418Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:56:52.721Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:56:53.020Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:56:53.324Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:57:05.830Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T14:58:58.537Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T19:15:28.830Z"}
+{"level":"info","message":"Tentativa de login iniciada","timestamp":"2026-07-16T19:15:42.194Z"}
+{"level":"info","message":"Login realizado com sucesso","timestamp":"2026-07-16T19:15:42.506Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T19:15:44.080Z"}
+{"level":"info","message":"Tentativa de cadastro de produto iniciada","timestamp":"2026-07-16T19:17:44.378Z"}
+{"level":"info","message":"Produto cadastrado com sucesso","timestamp":"2026-07-16T19:17:44.462Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T19:17:46.030Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T19:18:14.928Z"}
+{"level":"info","message":"Busca pelos produtos iniciado","timestamp":"2026-07-16T19:18:30.715Z"}

@@ -27,8 +27,11 @@ model Produto {
     id Int @id @default(autoincrement())
 
     nome String
-    preco Float
+    preco Decimal @db.Decimal(10, 2)
     estoque Int @default(0)
+    descricao String
+    imagem String
+    categoria String
 
     carrinhos Carrinho[]
     itensPedido PedidoItem[]

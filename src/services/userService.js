@@ -24,7 +24,7 @@ exports.register = async(nome, email, senha, role) => {
     })
 
     return {
-        mensagem: "Usuário criado",
+        message: "Usuário criado",
         id: usuario.id
     }
 }
@@ -49,7 +49,6 @@ exports.login = async(email, senha) => {
 
     if(!senhaValida){
         throw new AppError("Credenciais inválidas", 401)
-        
     }
 
     const token = jwt.sign(
@@ -122,7 +121,7 @@ exports.deleteUser = async(id) => {
     }
 
     return {
-        messag: "Usuário removido com sucesso",
+        message: "Usuário removido com sucesso",
         usuarioId: id
     }
 

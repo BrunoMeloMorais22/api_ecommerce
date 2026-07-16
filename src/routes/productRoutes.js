@@ -3,6 +3,7 @@ const router = express.Router()
 const productController = require('../controllers/productController')
 const authorize = require('../middlewares/authorize')
 const auth = require('../middlewares/auth')
+const upload = require("../config/upload");
 
 
 /**
@@ -45,7 +46,7 @@ const auth = require('../middlewares/auth')
  *       500:
  *         description: Erro interno do servidor
  */
-router.post("/produtos", auth, authorize('Admin'), productController.createProduct)
+router.post("/produtos", upload.single("imagem"), auth, authorize('Admin'), productController.createProduct)
 
 /**
  * @swagger

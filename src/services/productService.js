@@ -4,10 +4,8 @@ const productRepository = require('../repositories/productRepository')
 const AppError = require('../utils/AppError')
 const logger = require('../config/logger')
 
-exports.createProduct = async(nome, preco, estoque) => {
-
-    logger.info("Tentativa de cadastro de produto iniciado")
-
+exports.createProduct = async(nome, preco, estoque, descricao, imagem, categoria) => {
+console.log("IMAGEM CONTROLLER:", imagem);
     if(!nome || !preco || isNaN(preco) || preco <= 0){
         throw new AppError("Preencha todos os campos", 400)
     }
@@ -15,7 +13,10 @@ exports.createProduct = async(nome, preco, estoque) => {
     const produto = await productRepository.createProduct({
         nome,
         preco,
-        estoque
+        estoque,
+        descricao,
+        imagem,
+        categoria
     })
 
     return {
