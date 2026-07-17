@@ -5,7 +5,7 @@ const AppError = require('../utils/AppError')
 const logger = require('../config/logger')
 
 exports.createProduct = async(nome, preco, estoque, descricao, imagem, categoria) => {
-console.log("IMAGEM CONTROLLER:", imagem);
+
     if(!nome || !preco || isNaN(preco) || preco <= 0){
         throw new AppError("Preencha todos os campos", 400)
     }
@@ -18,6 +18,8 @@ console.log("IMAGEM CONTROLLER:", imagem);
         imagem,
         categoria
     })
+
+    await redisClient.del("produtos");
 
     return {
         mensagem: "Produto criado",
@@ -54,7 +56,7 @@ exports.getProducts = async() => {
 
 }
 
-exports.updateProduct = async (id, nome, preco, estoque) => {
+exports.updateProduct = async (id, nome, preco, estoque, descricao) => {
 
     if(!nome || !preco){
         throw new AppError(
@@ -67,8 +69,11 @@ exports.updateProduct = async (id, nome, preco, estoque) => {
         id,
         nome,
         preco,
-        estoque
+        estoque,
+        descricao
     )
+
+    await redisClient.del("produtos");
 
     if(result.affectedRows === 0){
         throw new AppError(
@@ -88,6 +93,8 @@ exports.deleteProduct = async (id) => {
 
     const result = await productRepository.deleteProduct(id)
 
+    await redisClient.del("produtos");
+
     if(result.affectedRows === 0){
         throw new AppError(
             "Produto não encontrado",
@@ -100,4 +107,13 @@ exports.deleteProduct = async (id) => {
         produtoId: id
     }
 
+}
+
+exports.getProductById = async(id) => {
+    const produto = await productRepository.getProductById(id)
+
+    if(!produto){
+        throw new AppError("Produto não encontrado", 404)
+    }
+    return produto
 }

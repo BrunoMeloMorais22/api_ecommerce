@@ -132,7 +132,7 @@ router.get("/produtos", productController.getProducts)
  *       404:
  *         description: Produto não encontrado
  */
-router.put('/produtos/:id',auth,authorize('Admin'),productController.updateProduct)
+router.put('/produtos/:id', auth, authorize('Admin'),productController.updateProduct)
 
 
 /**
@@ -164,4 +164,5 @@ router.put('/produtos/:id',auth,authorize('Admin'),productController.updateProdu
  */
 router.delete('/produtos/:id',auth,authorize('Admin'),productController.deleteProduct)
 
+router.get("/produtos/:id", auth, authorize("Admin"), productController.getProductById)
 module.exports = router

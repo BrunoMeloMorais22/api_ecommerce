@@ -60,13 +60,14 @@ exports.updateProduct = async(req, res, next) => {
 
         const id  = Number(req.params.id)
 
-        const { nome, preco, estoque } = req.body
+        const { nome, preco, estoque, descricao } = req.body
 
         const result = await productService.updateProduct(
             Number(req.params.id),
             nome,
             preco,
-            estoque
+            estoque,
+            descricao
         )
 
         logger.info('Produto atualizado com sucesso')
@@ -100,4 +101,16 @@ exports.deleteProduct = async(req, res, next) => {
         next(error)
     }
 
+}
+
+exports.getProductById = async(req, res, next) => {
+    try{
+        const id = Number(req.params.id)
+
+        const produto = await productService.getProductById(id)
+
+        return res.status(200).json(produto)
+    } catch(error) {
+        next(error)
+    }
 }

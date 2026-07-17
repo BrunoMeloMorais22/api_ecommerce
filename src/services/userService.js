@@ -64,7 +64,8 @@ exports.login = async(email, senha) => {
 
     return {
         message: "Login realizado com sucesso",
-        token
+        token,
+        role: usuario.role
     }
 
 }

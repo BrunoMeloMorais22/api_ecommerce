@@ -19,7 +19,14 @@
             <a href="#produtos">Demonstração</a>
             <a href="#funcionalidades">Funcionalidades</a>
             <a href="#contato">Contato</a>
-            <a href="#" id="logout">Sair</a>
+            <a href="#" class="logout">Sair</a>
+        </nav>
+
+        <nav id="logadoAdmin">
+            <a href="#produtos">Demonstração</a>
+            <a href="/dashboard">Cadastrar produtos</a>
+            <a href="#">Ver relatório</a>
+            <a href="#" class="logout">Sair</a>
         </nav>
     </header>
 
@@ -27,6 +34,20 @@
         <h3>Venda seus produtos com um sistema moderno e completo</h3>
         <p>Cadastre produtos, gerencie estoque, acompanhe pedidos e ofereça uma experiência profissional aos seus clientes</p> <br>
     </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Editar Produto</h3>
+
+            <input id="nome" placeholder="nome">
+            <input id="preco" placeholder="preco">
+            <input id="estoque" placeholder="estoque">
+            <input id="descricao" placeholder="descricao">
+
+            <button onclick="salvarEdicao()">Salvar</button>
+            <button onclick="fecharModal()">Cancelar</button>
+        </div>
+    </div>
 
     <main>
         <section id="produtos">

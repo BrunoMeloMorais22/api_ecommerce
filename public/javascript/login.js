@@ -17,8 +17,10 @@ document.getElementById("formLogin").addEventListener('submit', async function (
     const resultado = await response.json();
 
     if(response.ok) {
-        localStorage.setItem("token", resultado.data.token)
-        console.log(localStorage.getItem("token"));
+
+        localStorage.setItem("token", resultado.data.token);
+        localStorage.setItem("role", resultado.data.role);
+
         const mensagem = document.getElementById("mensagem")
         mensagem.textContent = resultado.data.message
         mensagem.style.color = "green";
@@ -28,7 +30,7 @@ document.getElementById("formLogin").addEventListener('submit', async function (
         }, 1500)
     } else{
         if(resultado.erros) {
-            mensagem.innerHTML = resultado.erros.map(erro => erro.mensage).join("<br>")
+            mensagem.innerHTML = resultado.erros.map(erro => erro.message).join("<br>")
         } else{
             mensagem.textContent = resultado.error
         }

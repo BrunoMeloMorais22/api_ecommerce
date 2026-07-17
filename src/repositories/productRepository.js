@@ -12,13 +12,14 @@ exports.getProducts = async () => {
     return await prisma.produto.findMany()
 }
 
-exports.updateProduct = async (id, nome, preco, estoque) => {
+exports.updateProduct = async (id, nome, preco, estoque, descricao) => {
     return await prisma.produto.update({
         where: { id },
         data: {
             nome,
             preco,
-            estoque
+            estoque,
+            descricao
         }
     })
 }
@@ -29,4 +30,12 @@ exports.deleteProduct = async (id) => {
             id: Number(id)
         } 
     })
+}
+
+exports.getProductById = async (id) => {
+    return await prisma.produto.findUnique({
+        where: {
+            id: Number(id)
+        }
+    });
 }

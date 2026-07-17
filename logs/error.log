@@ -379,3 +379,7 @@
 {"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-07-17T02:10:22.921Z"}
 {"level":"error","message":"Erro ao cadastrar usuário","timestamp":"2026-07-17T02:10:30.257Z"}
 {"level":"error","message":"Erro ao fazer login","timestamp":"2026-07-17T02:10:47.163Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-07-17T13:32:15.323Z"}
+{"level":"error","message":"Erro ao fazer login","timestamp":"2026-07-17T14:12:50.627Z"}
+{"level":"error","message":"Erro ao atualizar produto","timestamp":"2026-07-17T19:13:30.722Z"}
+{"level":"error","message":"Erro ao atualizar produto","timestamp":"2026-07-17T19:14:09.817Z"}
