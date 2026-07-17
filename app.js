@@ -5,6 +5,7 @@ const productRoutes = require('./src/routes/productRoutes')
 const orderRoutes = require('./src/routes/orderRoutes')
 const cartRoutes = require('./src/routes/cartRoutes')
 const errorHandler = require('./src/middlewares/errorHandler')
+const swagger = require("./src/docs/swagger")
 const app = express();
 
 app.use(express.json());
