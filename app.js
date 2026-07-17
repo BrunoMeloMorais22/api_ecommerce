@@ -6,6 +6,7 @@ const orderRoutes = require('./src/routes/orderRoutes')
 const cartRoutes = require('./src/routes/cartRoutes')
 const errorHandler = require('./src/middlewares/errorHandler')
 const swagger = require("./src/docs/swagger")
+const swaggerUi = require("swagger-ui-express");
 const app = express();
 
 app.use(express.json());
