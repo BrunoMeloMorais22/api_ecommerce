@@ -35,7 +35,7 @@ app.get('/dashboard', (req, res) => {
     res.sendFile(path.join(__dirname, "public/html/dashboardAdmin.html"))
 })
 
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swagger));
 
 app.use(errorHandler)
 
