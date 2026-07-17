@@ -1,5 +1,4 @@
-
-const API_URL = "https://api-ecommerce-online.onrender.com"
+const API_URL = "http://localhost:3000"
 
 document.getElementById("formLogin").addEventListener('submit', async function (e) {
     e.preventDefault()
@@ -29,11 +28,10 @@ document.getElementById("formLogin").addEventListener('submit', async function (
         }, 1500)
     } else{
         if(resultado.erros) {
-            mensagem.innerHTML = resultado.erros.join("<br>")
+            mensagem.innerHTML = resultado.erros.map(erro => erro.mensage).join("<br>")
         } else{
-            mensagem.textContent = resultado.data.message
+            mensagem.textContent = resultado.error
         }
-
         mensagem.style.color = "red"
     }
 })

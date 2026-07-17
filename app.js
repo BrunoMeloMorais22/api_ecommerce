@@ -4,7 +4,7 @@ const userRoutes = require('./src/routes/userRoutes')
 const productRoutes = require('./src/routes/productRoutes')
 const orderRoutes = require('./src/routes/orderRoutes')
 const cartRoutes = require('./src/routes/cartRoutes')
-const errorHandler = require('./src/utils/AppError')
+const errorHandler = require('./src/middlewares/errorHandler')
 const app = express();
 
 app.use(express.json());
@@ -33,5 +33,7 @@ app.get("/cadastro",(req,res)=>{
 app.get('/dashboard', (req, res) => {
     res.sendFile(path.join(__dirname, "public/html/dashboardAdmin.html"))
 })
+
+app.use(errorHandler)
 
 module.exports = app;
