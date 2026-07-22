@@ -20,6 +20,10 @@
             <a href="#funcionalidades">Funcionalidades</a>
             <a href="#contato">Contato</a>
             <a href="#" class="logout">Sair</a>
+            <a href="#" id="carrinho">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+                <span id="contadorCarrinho">0</span>
+            </a>
         </nav>
 
         <nav id="logadoAdmin">
@@ -44,8 +48,8 @@
             <input id="estoque" placeholder="estoque">
             <input id="descricao" placeholder="descricao">
 
-            <button onclick="salvarEdicao()">Salvar</button>
-            <button onclick="fecharModal()">Cancelar</button>
+            <button onclick="salvarEdicao()" class="btn">Salvar</button>
+            <button onclick="fecharModal()" class="btn">Cancelar</button>
         </div>
     </div>
 

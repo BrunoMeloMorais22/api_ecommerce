@@ -104,6 +104,14 @@ button:hover{
     text-decoration: underline;
 }
 
+#mensagem{
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
 .input-group{
     display: flex;
     align-items: center;
@@ -135,12 +143,6 @@ button:hover{
     box-shadow: none;
 }
 
-#mensagem{
-    margin-top: 20px;
-    font-size: 15px;
-    text-align: center;
-    font-weight: bold;
-}
 
 @media(max-width:480px){
 

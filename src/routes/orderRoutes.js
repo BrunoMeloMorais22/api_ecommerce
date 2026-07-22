@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const orderController = require('../controllers/orderController')
 const auth = require('../middlewares/auth')
+const authorize = require('../middlewares/authorize')
 
 /**
  * @swagger
@@ -67,5 +68,6 @@ router.post("/pedido", auth, orderController.createOrder)
  *         description: Erro interno do servidor
  */
 router.get("/pedidos", auth, orderController.getOrders)
+
 
 module.exports = router

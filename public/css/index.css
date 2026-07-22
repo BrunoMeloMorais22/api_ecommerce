@@ -163,6 +163,11 @@ header nav a:hover{
     animation: aparecer .25s ease;
 }
 
+.btn{
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
 .modal-content h3 {
     text-align: center;
     margin-bottom: 20px;
@@ -189,17 +194,19 @@ header nav a:hover{
 }
 
 .modal-content button:first-of-type {
-    background: #22c55e;
+    background: #1be900;
     color: white;
+    padding: 5px;
 }
 
 .modal-content button:first-of-type:hover {
-    background: #16a34a;
+    background: #29f700;
 }
 
 .modal-content button:last-of-type {
-    background: #6b7280;
+    background: #f70000;
     color: white;
+    padding: 5px;
 }
 
 .modal-content button:last-of-type:hover {
@@ -354,4 +361,10 @@ header nav a:hover{
     padding:20px;
     border-top:1px solid rgba(255,255,255,.1);
     color:#9ca3af;
+}
+
+#message{
+    color: red;
+    font-weight: bold;
+    margin-top: 5px;
 }

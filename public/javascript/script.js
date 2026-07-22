@@ -74,7 +74,7 @@ async function carregarProdutos() {
         }
         else{
             botoes = `
-                <button>Ver produtos</button>
+                <button onclick="adicionarAoCarrinho(${produto.id}, this)">Adicionar ao carrinho</button><small id="message"></small>
             `
         }
         
@@ -164,5 +164,53 @@ async function salvarEdicao() {
     }
 }
 
+async function atualizarContadorCarrinho(){
+
+    const response = await fetch(`${API_URL}/cart/carrinho`,{
+        headers:{
+            Authorization:`Bearer ${token}`
+        }
+    });
+
+    const resultado = await response.json();
+
+    document.getElementById("contadorCarrinho").textContent =
+        resultado.data.length;
+}
+
+async function adicionarAoCarrinho(id, botao) {
+    const token = localStorage.getItem("token")
+
+    const response = await fetch(`${API_URL}/cart/carrinho`, {
+        method: "POST",
+        headers:{
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+
+        body: JSON.stringify({
+            produto_id: id,
+            quantidade: 1
+        })
+    })
+
+    const resultado = await response.json()
+
+    if(response.ok){
+        const message = botao.nextElementSibling
+        message.textContent = resultado.data.mensagem
+
+        setTimeout(() => {
+            message.textContent = ""
+        }, 2000)
+        atualizarContadorCarrinho() 
+    } 
+
+    else{
+        alert(resultado.error)
+    }
+}
+
 
 carregarProdutos()
+atualizarContadorCarrinho();

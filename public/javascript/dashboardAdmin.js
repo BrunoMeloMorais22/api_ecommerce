@@ -31,7 +31,7 @@ document.getElementById("formProduto").addEventListener('submit', async function
 
     } else{
         if(resultado.erros) {
-            mensagem.innerHTML = resultado.erros.map(erro => erro.mensage).join("<br>")
+            mensagem.innerHTML = resultado.erros.map(erro => erro.mensagem).join("<br>")
         } else{
             mensagem.textContent = resultado.error
         }

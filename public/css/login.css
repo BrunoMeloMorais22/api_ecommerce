@@ -111,6 +111,37 @@ button:hover{
     font-weight: bold;
 }
 
+.input-group{
+    display: flex;
+    align-items: center;
+    border: 1px solid #d6d6d6;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+
+.input-group:focus-within{
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37,99,235,.15);
+}
+
+.input-group i{
+    padding: 0 15px;
+    color: #666;
+    font-size: 16px;
+}
+
+.input-group input{
+    border: none;
+    box-shadow: none;
+    margin: 0;
+}
+
+.input-group input:focus{
+    border: none;
+    box-shadow: none;
+}
+
 @media(max-width:480px){
 
     form{
